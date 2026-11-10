@@ -125,6 +125,10 @@ h3{font-size:22px;line-height:1.25}
 .item .ico{width:34px;height:34px;margin-top:2px;color:var(--juliano-accent)}
 .item h3{margin:0 0 6px}
 .item p{margin:0;color:var(--juliano-ink-2)}
+.urgencia{margin-top:var(--juliano-e-4);display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:var(--juliano-e-2);padding:var(--juliano-e-3);background:var(--juliano-surface);border:1px solid var(--juliano-hair-forte);border-left:3px solid var(--juliano-bronze);border-radius:var(--juliano-r-campo)}
+.urgencia .ico{margin-top:2px;color:var(--juliano-bronze)}
+.urgencia h3{margin:0 0 6px}
+.urgencia p{margin:0;color:var(--juliano-ink)}
 .reveal{transition:opacity .7s var(--juliano-ease),transform .7s var(--juliano-ease)}
 .js .reveal:not(.in){opacity:0;transform:translateY(12px)}
 
@@ -386,6 +390,7 @@ h3{font-size:22px;line-height:1.25}
     <symbol id="i-cal" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></symbol>
     <symbol id="i-msg" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
     <symbol id="i-nav" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol>
+    <symbol id="i-alerta" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
     <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
   </defs>
 </svg>
@@ -442,12 +447,18 @@ h3{font-size:22px;line-height:1.25}
         <button class="btn" type="button" data-wa>Agendar consulta <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
       </div>
     </div>
+    <div class="lado">
     <ul class="itens">
       <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><div><h3>Pressão alta ou que oscila</h3><p>Pressão alta, ou que sobe e desce. A gente olha o padrão, os exames e os remédios que você já usa, e define o próximo passo.</p></div></li>
       <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><h3>Check-up do adulto</h3><p>Olho coração, pressão e exames juntos. Explico o que faz sentido pedir no seu caso e por quê.</p></div></li>
       <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg><div><h3>Exame que veio alterado</h3><p>Traga o resultado. Eu explico o que ele significa no seu caso e se pede mais exames ou acompanhamento.</p></div></li>
       <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg><div><h3>Cansaço, palpitação ou medo do coração</h3><p>Esses sintomas têm causas diferentes, nem todas no coração. Escuto a sua história, examino e explico o que vale investigar.</p></div></li>
     </ul>
+    <div class="urgencia" role="note">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-alerta"/></svg>
+      <div><h3>Quando não esperar a consulta</h3><p>Dor forte no peito, falta de ar, desmaio ou fraqueza de um lado do corpo: procure o pronto-atendimento ou ligue 192.</p></div>
+    </div>
+    </div>
   </div>
 </section>
 
