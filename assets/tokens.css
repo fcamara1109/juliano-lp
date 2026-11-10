@@ -1,0 +1,110 @@
+/* ============================================================
+   Dr. Juliano Reis, cardiologista e clínico (CRM-MG 63389)
+   Identidade visual "Placa de pedra", versão 1, 09/11/2026
+
+   Função: fonte única das cores, tipos, formas e movimento da marca.
+   Base: direção B (evoluir), de exploracoes/direcoes-marca.html. Parte da placa do consultório
+   (parede greige, letra em pedra clara, coração com o monograma JR) e corrige o que a placa não
+   sustenta na tela: contraste de texto e cor de ação. Regras de uso: manual-marca.html.
+   Aguardando o crivo do Dr. Juliano: nada aqui foi visto por ele.
+
+   Importe por caminho, nunca copie os valores:
+       <link rel="stylesheet" href=".../marca-juliano/tokens.css">
+
+   Gabarito: python3 _shared/tools/gabarito_marca.py tokens.css manual-marca.html
+   ============================================================ */
+
+:root{
+  /* ---------- superfície ---------- */
+  --juliano-paper:      #F5F2EC;   /* creme de pedra, fundo de toda página */
+  --juliano-paper-2:    #EAE5DC;   /* segunda dobra, faixa de apoio */
+  --juliano-surface:    #FCFBF8;   /* cartão e campo sobre o creme */
+  --juliano-hair:       #D6CFC4;   /* linha fina, só ornamento (o ripado). Nunca delimita controle */
+  --juliano-hair-forte: #857B6D;   /* borda de controle: 3.72:1 sobre o creme, 4.02:1 sobre o cartão, 3.31:1 sobre a dobra */
+
+  /* ---------- tinta ---------- */
+  --juliano-ink:        #1E2428;   /* carvão de texto, 14.04:1 sobre o creme */
+  --juliano-ink-2:      #444B50;   /* texto secundário, 7.94:1 sobre o creme, 7.07:1 sobre a dobra */
+  --juliano-ink-3:      #586065;   /* rótulo e legenda, 5.74:1 sobre o creme, 5.11:1 sobre a dobra */
+
+  /* ---------- ação: azul-noite ---------- */
+  --juliano-accent:        #1F3C5A;   /* botão, link, coração do símbolo e nome na assinatura: 10.15:1 sobre o creme */
+  --juliano-accent-deep:   #162D45;   /* hover do botão: 13.24:1 com o texto do botão */
+  --juliano-on-accent:     #FAF8F4;   /* texto do botão: 10.69:1 */
+
+  /* ---------- detalhe: bronze e pedra ---------- */
+  --juliano-bronze:     #7D5C39;   /* aorta do símbolo e filete. Aguenta texto: 5.43:1 sobre o creme, 4.84:1 sobre a dobra */
+  --juliano-pedra:      #E4DED3;   /* faixa de pedra (a letra da placa): superfície, com tinta por cima. ink-2 dá 6.62:1 */
+  --juliano-greige:     #B8AEA0;   /* a parede da placa. Só preenchimento e foto: 1.96:1 sobre o creme, nunca letra */
+
+  /* ---------- noite: o único fundo escuro ---------- */
+  --juliano-night:      #172431;   /* faixa escura, avatar escuro, assinatura em fundo escuro */
+  --juliano-on-night:   #F5F2EC;   /* texto sobre a noite, 14.10:1 */
+  --juliano-on-night-2: #CFCAC0;   /* texto secundário sobre a noite, 9.65:1 */
+  --juliano-bronze-claro: #C9A27A; /* bronze sobre a noite, 6.70:1 */
+
+  /* ---------- semântico ----------
+     A cor nunca vem sozinha: o rótulo escrito também diz. */
+  --juliano-ok:         #2F6641;   /* 6.17:1 sobre o creme */
+  --juliano-erro:       #A03A34;   /* 6.07:1 sobre o creme */
+
+  /* ---------- tipografia ----------
+     Jost no nome, nos títulos e nos botões: é a letra da placa, geométrica e de caixa-alta espaçada.
+     Newsreader no texto: serifa de leitura, calma, que aguenta 20px sem cansar quem tem 50 anos ou mais. */
+  --juliano-display: 'Jost', 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+  --juliano-body:    'Newsreader', Georgia, 'Times New Roman', serif;
+
+  /* Escala, em rem com o piso em px (o gabarito lê o primeiro px). Escolha de acessibilidade (legibilidade 50+, sem afirmar o público): corpo 20px,
+     legenda 16px, nada abaixo de 15px nesta marca, rótulo incluso. */
+  --juliano-t-display: clamp(32px, 1.6rem + 2.4vw, 3.5rem);
+  --juliano-t-h2:      clamp(26px, 1.4rem + 1.2vw, 2.375rem);
+  --juliano-t-h3:      max(22px, 1.375rem);
+  --juliano-t-lede:    max(22px, 1.375rem);
+  --juliano-t-corpo:   max(20px, 1.25rem);
+  --juliano-t-legenda: max(16px, 1rem);
+  --juliano-t-rotulo:  max(15px, 0.9375rem);
+  --juliano-t-botao:   max(18px, 1.125rem);
+
+  --juliano-lh-titulo:  1.15;
+  --juliano-lh-corpo:   1.6;
+  --juliano-lh-legenda: 1.6;
+
+  --juliano-peso-titulo: 500;   /* Jost 500: o 400 afina demais no azul-noite */
+  --juliano-peso-corpo:  400;
+  --juliano-peso-botao:  500;
+
+  /* caixa-alta espaçada: o jeito da placa de escrever o nome e o descritor */
+  --juliano-track-nome:   .14em;
+  --juliano-track-rotulo: .1em;
+  --juliano-track-titulo: -.005em;
+
+  /* ---------- espaço ---------- */
+  --juliano-e-1:  8px;
+  --juliano-e-2: 14px;
+  --juliano-e-3: 22px;
+  --juliano-e-4: 34px;
+  --juliano-e-5: 56px;
+  --juliano-e-6: clamp(64px, 7vw, 104px);
+
+  --juliano-toque: 48px;   /* alvo mínimo de toque (acima dos 44px da WCAG 2.5.5, por acessibilidade) */
+
+  /* ---------- forma ---------- */
+  --juliano-r-btn:    8px;
+  --juliano-r-cartao: 10px;
+  --juliano-r-campo:  8px;
+  --juliano-r-foto:   6px;
+
+  /* ---------- grafismo: o ripado ----------
+     O painel de madeira ripada da parede do consultório. Só em faixa larga (topo e rodapé do site, fundo de cartão),
+     nunca atrás de texto corrido. */
+  --juliano-ripado: repeating-linear-gradient(90deg, var(--juliano-hair) 0 1px, transparent 1px 14px);
+
+  /* ---------- sombra: deslocada e macia, nunca halo ---------- */
+  --juliano-sombra-btn:       0 8px 18px -10px rgba(22,45,69,.55);
+  --juliano-sombra-btn-hover: 0 12px 22px -10px rgba(22,45,69,.6);
+  --juliano-sombra-foto:      0 18px 30px -20px rgba(30,36,40,.45);
+
+  /* ---------- movimento ---------- */
+  --juliano-ease: cubic-bezier(.2,.7,.2,1);   /* saída exponencial */
+  --juliano-dur:  .3s;
+}

@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr. Juliano Reis, médico cardiologista (RQE 45159)</title>
+<!--
+Função: site do Dr. Juliano Reis (cardiologista e clínica médica, CRM-MG 63389, Varginha), página única na espinha do blueprint de LP de médico, mais a barra de autoridade (beneficios) e o widget de WhatsApp. O texto mora em copy.md (um bloco ## chave por pedaço); o index.html é gerado por marketing-agency/sites/_shared/monta_site.py e nunca se edita.
+Data: 2026-11-09. Marca: external/doctors/juliano/wiki/concepts/marca-juliano (tokens.css copiado para assets/tokens.css, copia de deploy). Ícones: Lucide v0.475.0 (licença ISC), em sprite no começo do body.
+Preview noindex em fcamara1109/juliano-lp. Premissas, desvios e pendências: README.md desta pasta.
+-->
+<meta name="description" content="Dr. Juliano Reis, médico (CRM-MG 63389) e cardiologista (RQE 45159) em Varginha, MG. Consulta de cerca de 30 minutos, com hora marcada.">
+<meta name="theme-color" content="#F5F2EC">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Dr. Juliano Reis">
+<meta property="og:title" content="Cuido do coração e do resto junto, na mesma consulta">
+<meta property="og:description" content="Médico, CRM-MG 63389. Cardiologia, RQE 45159. Consulta de cerca de 30 minutos em Varginha, MG.">
+<meta property="og:image" content="https://fcamara1109.github.io/juliano-lp/assets/og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cuido do coração e do resto junto, na mesma consulta">
+<meta name="twitter:description" content="Médico, CRM-MG 63389. Cardiologia, RQE 45159. Consulta de cerca de 30 minutos em Varginha, MG.">
+<link rel="preload" href="assets/fonts/Jost.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/Newsreader.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/tokens.css">
+<noscript><style>button[data-wa],.wafloat{display:none!important}.sticky{display:flex!important}</style></noscript>
+<style>
+@font-face{font-family:'Jost';src:url('assets/fonts/Jost.woff') format('woff');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Newsreader';src:url('assets/fonts/Newsreader.woff') format('woff');font-weight:200 800;font-style:normal;font-display:swap}
+
+/* ---------- base ---------- */
+*{box-sizing:border-box}
+:root{
+  --sticky-h:76px;
+  --wrap-pad:clamp(20px,4.5vw,40px);
+  --site-t-fio:clamp(20px,2vw,24px);   /* degrau proprio: linha da barra de autoridade, entre o corpo (20) e o h2 (26 a 38) */
+}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:96px;scrollbar-color:var(--juliano-hair-forte) var(--juliano-paper-2);accent-color:var(--juliano-accent)}
+body{margin:0;background:var(--juliano-paper);color:var(--juliano-ink);font-family:var(--juliano-body);font-weight:var(--juliano-peso-corpo);font-size:20px;line-height:1.6;-webkit-font-smoothing:antialiased;font-synthesis:none;caret-color:var(--juliano-accent);}
+::selection{background:var(--juliano-accent);color:var(--juliano-on-accent)}
+:focus-visible{outline:3px solid var(--juliano-accent);outline-offset:3px}
+.beneficios :focus-visible,.prova :focus-visible,.cta-final :focus-visible{outline-color:var(--juliano-on-night)}
+img{max-width:100%;height:auto}
+svg{display:block}
+p{margin:0 0 1.1em;max-width:62ch;text-wrap:pretty}
+a{color:var(--juliano-accent);text-underline-offset:.2em;text-decoration-thickness:1px}
+button{font:inherit;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--wrap-pad)}
+.pular{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--juliano-accent);color:var(--juliano-on-accent);padding:12px 18px;border-radius:var(--juliano-r-campo)}
+.pular:focus{left:12px}
+.ico{width:28px;height:28px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- tipos ---------- */
+h1,h2,h3{margin:0;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);line-height:var(--juliano-lh-titulo);letter-spacing:var(--juliano-track-titulo);text-wrap:balance}
+h1{font-size:clamp(32px,1.6rem + 2.4vw,56px)}
+h2{font-size:clamp(26px,1.4rem + 1.2vw,38px)}
+h3{font-size:22px;line-height:1.25}
+.filete{display:block;width:44px;height:2px;margin:var(--juliano-e-3) 0 var(--juliano-e-3);background:var(--juliano-bronze,#7D5C39)}
+.leg{font-size:var(--juliano-t-legenda);line-height:var(--juliano-lh-legenda);color:var(--juliano-ink-2)}
+
+/* ---------- botao: azul-noite, um por dobra. Sobre a noite inverte (creme com letra azul-noite), senao some ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:var(--juliano-toque);padding:14px 28px;border:0;border-radius:var(--juliano-r-btn);font-family:var(--juliano-display);font-weight:var(--juliano-peso-botao);font-size:var(--juliano-t-botao);line-height:1.3;letter-spacing:.03em;color:var(--juliano-on-accent);background:linear-gradient(180deg,var(--juliano-accent,#1F3C5A) 0%,var(--juliano-accent-deep) 100%);box-shadow:var(--juliano-sombra-btn);cursor:pointer;text-decoration:none;transition:transform var(--juliano-dur) var(--juliano-ease),box-shadow var(--juliano-dur) var(--juliano-ease),background var(--juliano-dur) var(--juliano-ease)}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--juliano-sombra-btn-hover);background:var(--juliano-accent-deep)}
+.btn:active{transform:translateY(0)}
+.btn .seta{width:20px;height:20px;transition:transform var(--juliano-dur) var(--juliano-ease)}
+.btn:hover .seta{transform:translateX(4px)}
+.btn.claro{background:var(--juliano-on-night);color:var(--juliano-accent);box-shadow:0 10px 22px -12px rgba(0,0,0,.6)}
+.btn.claro:hover{background:#fff}
+.link-seta{display:inline-flex;align-items:center;gap:10px;min-height:var(--juliano-toque);color:var(--juliano-accent);font-family:var(--juliano-display);font-weight:var(--juliano-peso-botao);font-size:var(--juliano-t-botao);text-decoration:underline;text-decoration-color:var(--juliano-hair-forte);text-decoration-thickness:1px;text-underline-offset:.3em;transition:text-decoration-color var(--juliano-dur) var(--juliano-ease)}
+.link-seta:hover{text-decoration-color:var(--juliano-accent)}
+.link-seta .ico{width:20px;height:20px}
+
+/* ---------- header ---------- */
+.topo-site{position:relative;z-index:40;background:var(--juliano-paper);border-bottom:1px solid var(--juliano-hair)}
+.topo-site .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--juliano-e-3);padding-top:10px;padding-bottom:10px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0;color:var(--juliano-accent)}
+.marca img{width:44px;height:44px;flex:none}
+.wm{display:block;min-width:0}
+.wm b{display:block;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:17px;line-height:1.1;letter-spacing:var(--juliano-track-nome);text-transform:uppercase;white-space:nowrap}
+.wm span{display:block;margin-top:5px;font-size:var(--juliano-t-legenda);line-height:1.25;color:var(--juliano-ink-2)}
+.topo-site .btn{display:none;min-height:var(--juliano-toque);padding:9px 22px}
+
+/* ---------- hero: o eixo, o nome, uma linha de prova, um botao, o apoio ---------- */
+.hero{position:relative;padding:var(--juliano-e-4) 0 0;background:var(--juliano-paper)}
+.hero .wrap{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"h1 h1" "sub sub" "foto id" "rqe rqe" "acoes acoes";column-gap:var(--juliano-e-3);row-gap:var(--juliano-e-3);align-items:start}
+.hero h1{grid-area:h1}
+.sub{grid-area:sub;margin:0;max-width:34em;font-family:var(--juliano-display);font-weight:400;font-size:var(--juliano-t-lede);line-height:1.4;color:var(--juliano-ink)}
+.sub .uti{color:var(--juliano-accent);font-weight:500}
+.foto{grid-area:foto;position:relative;margin:0;width:116px}
+.foto img{display:block;width:116px;height:145px;object-fit:cover;object-position:50% 50%;border-radius:var(--juliano-r-foto);box-shadow:var(--juliano-sombra-foto);background:var(--juliano-greige)}
+.id{grid-area:id;min-width:0}
+.id p{margin:0}
+.id .nome{font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:19px;line-height:1.25;color:var(--juliano-ink)}
+.id .crm{margin-top:4px;font-size:var(--juliano-t-legenda);line-height:1.4;color:var(--juliano-ink)}
+.rqe{grid-area:rqe;margin:0;font-size:var(--juliano-t-legenda);line-height:1.5;color:var(--juliano-ink-2)}
+.rqe span{display:block;white-space:nowrap}
+.id .cred{margin-top:10px;font-size:var(--juliano-t-legenda);line-height:1.4;font-weight:500;color:var(--juliano-ink)}
+.acoes{grid-area:acoes;display:grid;gap:var(--juliano-e-2);justify-items:start}
+.acoes .btn{width:100%}
+/* o ripado do painel de madeira: faixa decorativa na base do hero, nunca atras de texto. O unico movimento autoral da pagina: varre da esquerda para a direita uma vez, na carga */
+.ripado{display:block;height:44px;margin-top:var(--juliano-e-5);background:url(fotos/amb-ripado.jpg) center 30%/auto 180% repeat-x;border-top:1px solid var(--juliano-hair-forte)}
+.js .ripado{animation:ripado-entra 1.3s .2s cubic-bezier(.16,1,.3,1) both}
+@keyframes ripado-entra{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+/* ---------- beneficios: a barra de autoridade, na noite. Tres objecoes diferentes, cada uma com seu icone ---------- */
+.beneficios{background:var(--juliano-night,#172431);color:var(--juliano-on-night);padding:var(--juliano-e-1) 0}
+.beneficios ul{list-style:none;margin:0;padding:0;display:grid}
+.beneficios li{display:flex;align-items:center;gap:var(--juliano-e-2);padding:var(--juliano-e-3) 0;border-top:1px solid rgba(245,242,236,.16);font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:var(--site-t-fio);line-height:1.3;letter-spacing:.01em;text-wrap:balance}
+.beneficios li:first-child{border-top:0}
+.beneficios .ico{width:30px;height:30px;color:var(--juliano-bronze-claro)}
+
+/* ---------- servicos: pedra clara. Titulo e convite de um lado, lista com icone do outro (regua, sem cartao) ---------- */
+.servicos{background:var(--juliano-pedra);padding:var(--juliano-e-6) 0}
+.servicos .wrap{display:grid;gap:var(--juliano-e-5)}
+.servicos .cab p{margin:0 0 var(--juliano-e-3);max-width:34em;color:var(--juliano-ink-2)}
+.servicos .cab .fecho{margin-top:var(--juliano-e-4)}
+.itens{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--juliano-hair-forte)}
+.item{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:var(--juliano-e-3);padding:var(--juliano-e-3) 0;border-top:1px solid var(--juliano-hair-forte)}
+.item .ico{width:34px;height:34px;margin-top:2px;color:var(--juliano-accent)}
+.item h3{margin:0 0 6px}
+.item p{margin:0;color:var(--juliano-ink-2)}
+.reveal{transition:opacity .7s var(--juliano-ease),transform .7s var(--juliano-ease)}
+.js .reveal:not(.in){opacity:0;transform:translateY(12px)}
+
+/* ---------- porque: papel. O titulo de um lado, a voz dele do outro ---------- */
+.porque{background:var(--juliano-paper);padding:var(--juliano-e-6) 0}
+.porque .wrap{display:grid;gap:var(--juliano-e-4)}
+.porque .corpo p:last-child{margin-bottom:0}
+.porque p{color:var(--juliano-ink-2)}
+.porque .abre{font-size:var(--juliano-t-lede);line-height:1.5;color:var(--juliano-ink)}
+
+/* ---------- prova: noite. Os registros em linha de placa (rotulo e numero no mesmo tamanho), ---------- */
+.prova{background:var(--juliano-night);color:var(--juliano-on-night);padding:var(--juliano-e-6) 0}
+.prova .wrap{display:grid;gap:var(--juliano-e-4)}
+.prova .cab p{margin:0}
+.prova .links{margin:0 0 var(--juliano-e-1)}
+.prova h2{color:var(--juliano-on-night)}
+.prova .filete{background:var(--juliano-bronze-claro)}
+.prova p{color:var(--juliano-on-night-2)}
+.regs{margin:var(--juliano-e-2) 0 0;padding:0;border-bottom:1px solid rgba(245,242,236,.22);max-width:34em}
+.regs div{display:flex;justify-content:space-between;align-items:baseline;gap:var(--juliano-e-3);padding:var(--juliano-e-2) 0;border-top:1px solid rgba(245,242,236,.22)}
+.regs dt,.regs dd{margin:0;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:var(--juliano-t-h3);line-height:1.3;letter-spacing:.02em}
+.regs dt{color:var(--juliano-on-night-2);font-weight:400}
+.regs dd{color:var(--juliano-on-night);font-variant-numeric:tabular-nums}
+.prova .mestrado{margin:var(--juliano-e-3) 0 0;max-width:34em;color:var(--juliano-on-night)}
+.prova .link-seta{color:var(--juliano-on-night);text-decoration-color:var(--juliano-bronze-claro)}
+.prova .link-seta:hover{text-decoration-color:var(--juliano-on-night)}
+
+/* ---------- faq: papel, details e summary (funciona sem JavaScript) ---------- */
+.faq{background:var(--juliano-paper);padding:var(--juliano-e-6) 0 var(--juliano-e-5)}
+.faq .lista{margin-top:var(--juliano-e-4);max-width:48em;border-bottom:1px solid var(--juliano-hair-forte)}
+.faq details{border-top:1px solid var(--juliano-hair-forte)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:var(--juliano-e-3);min-height:var(--juliano-toque);padding:var(--juliano-e-3) 0;cursor:pointer;list-style:none;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:var(--juliano-t-h3);line-height:1.3;color:var(--juliano-ink);transition:color var(--juliano-dur) var(--juliano-ease)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:18px;height:18px;color:var(--juliano-bronze);background:linear-gradient(currentColor,currentColor) center/100% 1.5px no-repeat,linear-gradient(currentColor,currentColor) center/1.5px 100% no-repeat;transition:transform var(--juliano-dur) var(--juliano-ease)}
+.faq details[open] summary::after{background:linear-gradient(currentColor,currentColor) center/100% 1.5px no-repeat;transform:rotate(180deg)}
+.faq summary:hover{color:var(--juliano-accent)}
+.faq details p{margin:0;padding:0 0 var(--juliano-e-3);max-width:38em;color:var(--juliano-ink-2)}
+
+/* ---------- local: pedra clara. Foto do consultorio e as linhas de endereco, dia, consulta e como marcar ---------- */
+.local{background:var(--juliano-pedra);padding:var(--juliano-e-6) 0}
+.local .foto-c{display:block;margin:0}
+.local .foto-c img{display:block;width:100%;height:clamp(190px,52vw,320px);object-fit:cover;object-position:50% 62%}
+.local .wrap{display:grid;gap:var(--juliano-e-4)}
+.local .cab p{margin:0;max-width:34em;color:var(--juliano-ink-2)}
+.local dl{margin:0;border-bottom:1px solid var(--juliano-hair-forte)}
+.local .linha-l{display:grid;row-gap:2px;padding:var(--juliano-e-3) 0;border-top:1px solid var(--juliano-hair-forte)}
+.local dt{font-size:var(--juliano-t-legenda);line-height:1.4;color:var(--juliano-ink-2)}
+.local dd{margin:0;line-height:1.5;color:var(--juliano-ink)}
+
+/* ---------- cta-final: noite, fecha a descida ---------- */
+.cta-final{background:var(--juliano-night);color:var(--juliano-on-night);text-align:center;padding:var(--juliano-e-6) 0}
+.cta-final .wrap{display:grid;justify-items:center;gap:var(--juliano-e-3)}
+.cta-final img{width:64px;height:64px}
+.cta-final h2{font-size:clamp(32px,1.6rem + 2.4vw,56px);max-width:15em;color:var(--juliano-on-night)}
+.cta-final p{margin:0;max-width:30em;color:var(--juliano-on-night-2)}
+.cta-final .btn{margin-top:var(--juliano-e-2)}
+
+/* ---------- rodape: faixa de ripado em cima, depois o aviso legal ---------- */
+.rodape{background:var(--juliano-paper-2);padding:0 0 calc(var(--juliano-e-5) + var(--sticky-h) + env(safe-area-inset-bottom))}
+.rodape .ripado{margin:0 0 var(--juliano-e-5)}
+.js .rodape .ripado{animation:none}
+.rodape .wrap{display:grid;gap:var(--juliano-e-3)}
+.rodape p{margin:0;max-width:52em}
+.rodape .esp,.rodape .end{color:var(--juliano-ink-2)}
+
+/* ---------- float (desktop) e sticky (mobile) ---------- */
+.wafloat{display:none}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;justify-content:center;background:var(--juliano-paper);border-top:1px solid var(--juliano-hair);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -12px 24px -18px rgba(30,36,40,.4)}
+.sticky .btn{width:min(100%,360px)}
+.sticky{transition:transform var(--juliano-dur) var(--juliano-ease)}
+.sticky.oculta{transform:translateY(110%)}
+#wa-modal .online .dot{display:none}
+
+@media (min-width:560px){
+  .acoes{grid-auto-flow:column;justify-content:start;align-items:center;gap:var(--juliano-e-3)}
+  .acoes .btn{width:auto}
+}
+@media (min-width:880px){
+  .rodape{padding-bottom:var(--juliano-e-5)}
+  .sticky{display:none}
+  .wafloat{display:flex}
+  .topo-site{position:sticky;top:0}
+  .topo-site .btn{display:inline-flex}
+  .topo-site .wrap{padding-top:12px;padding-bottom:12px}
+  .marca img{width:50px;height:50px}
+  .wm b{font-size:18px}
+  .hero{padding-top:var(--juliano-e-6)}
+  .hero .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);grid-template-areas:"h1 foto" "sub foto" "id foto" "rqe foto" "acoes foto";column-gap:var(--juliano-e-6);row-gap:var(--juliano-e-3);align-items:start}
+  .foto{width:100%;max-width:380px;justify-self:end;margin-right:var(--juliano-e-3)}
+  .foto::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--juliano-bronze);border-radius:var(--juliano-r-foto);z-index:0}
+  .foto img{position:relative;z-index:1;width:100%;height:auto;aspect-ratio:4/5;object-position:50% 50%}
+  .id .nome{font-size:24px}
+  .id .crm{font-size:18px}
+  .rqe{font-size:18px}
+  .id .cred{font-size:20px}
+  .ripado{height:56px;margin-top:var(--juliano-e-6)}
+  .beneficios ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .beneficios li{border-top:0;border-left:1px solid rgba(245,242,236,.16);padding:var(--juliano-e-4) var(--juliano-e-4)}
+  .beneficios li:first-child{border-left:0;padding-left:0}
+  .servicos .wrap{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);column-gap:var(--juliano-e-6);align-items:start}
+  .servicos .cab{position:sticky;top:112px}
+  .porque .wrap,.prova .wrap{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);column-gap:var(--juliano-e-6);align-items:start}
+  .porque .cab,.prova .cab{position:sticky;top:112px}
+  .local{padding:var(--juliano-e-6) 0}
+  .local .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:var(--juliano-e-6);align-items:center}
+  .local .foto-c{grid-column:1;grid-row:1;margin:0;position:relative}
+  .local .foto-c::before{content:"";position:absolute;inset:16px 16px -16px -16px;border:1px solid var(--juliano-bronze);border-radius:var(--juliano-r-foto);z-index:0}
+  .local .foto-c img{position:relative;z-index:1;height:420px;border-radius:var(--juliano-r-foto);box-shadow:var(--juliano-sombra-foto)}
+  .local .corpo{grid-column:2;grid-row:1}
+  .wafloat{width:60px}
+}
+@media (max-width:879px){.wafloat{display:none!important}}
+@media (max-width:359px){.wm b{font-size:15px;letter-spacing:.1em}.marca img{width:38px;height:38px}.btn{padding-left:20px;padding-right:20px}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}
+  .js .reveal:not(.in){opacity:1;transform:none}
+}
+</style>
+<style>
+/* widget:inicio */
+  /* tema do widget — defaults neutros via :where() (especificidade 0) pra que
+     um override #wa-modal{...} na LP sempre vença, em qualquer ordem no documento */
+  :where(#wa-modal), :where(.wafloat){
+    --wa:#25D366;                 /* verde WhatsApp (fixo) */
+    --wa-head-a:#3a6ea5;          /* gradiente do header (claro) */
+    --wa-head-b:#1f3b5c;          /* gradiente do header (escuro) + texto forte */
+    --wa-accent:#f5a623;          /* destaque: foco do input, número em evidência */
+    --wa-accent-d:#d98614;
+    --wa-band:#eef2f6;            /* faixa clara (barra online) */
+    --wa-surface:#fff;
+    --wa-line:#e6e6e6;
+    --wa-ink:#333;
+    --wa-muted:#8a8a8a;
+    --wa-head-font:'Poppins',system-ui,sans-serif;
+    --wa-body-font:'Montserrat',system-ui,sans-serif;
+  }
+
+  /* botão flutuante (gatilho default; opcional) */
+  .wafloat{position:fixed;right:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:var(--wa);
+    display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.25);z-index:45;cursor:pointer;border:0;}
+  .wafloat svg{width:30px;height:30px;fill:#fff;}
+
+  #wa-modal{border:none;background:transparent;padding:0;max-width:100%;position:fixed;inset:0;margin:auto;height:max-content;overflow:visible;}
+  #wa-modal::backdrop{background:rgba(20,20,20,.55);}
+  #wa-modal .widget{width:360px;max-width:92vw;background:var(--wa-surface);border-radius:22px;box-shadow:0 30px 70px -25px rgba(0,0,0,.45);overflow:hidden;position:relative;font-family:var(--wa-body-font);color:var(--wa-ink);}
+  #wa-modal .wa-close{position:absolute;top:11px;right:13px;z-index:5;width:30px;height:30px;border:none;border-radius:50%;background:rgba(255,255,255,.22);color:#fff;font-size:14px;cursor:pointer;line-height:1;display:grid;place-items:center;}
+  #wa-modal .wa-close:hover{background:rgba(255,255,255,.4);}
+  #wa-modal .screen{display:none;}
+  #wa-modal .screen.active{display:block;animation:wafade .3s ease;}
+  @keyframes wafade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+  #wa-modal .whead{background:linear-gradient(135deg,var(--wa-head-a),var(--wa-head-b));color:#fff;padding:1.15rem 3.4rem 1.25rem 1.25rem;display:flex;align-items:center;gap:.85rem;}  /* 3.4rem à direita: o texto não passa por baixo do botão fechar */
+  #wa-modal .avatar{flex:none;width:56px;height:56px;border-radius:50%;position:relative;background:rgba(255,255,255,.18);border:2.5px solid rgba(255,255,255,.85);display:grid;place-items:center;}
+  #wa-modal .avatar svg{width:30px;height:30px;}
+  #wa-modal .avatar img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 20%;}  /* opcional: foto no lugar do ícone (class="avatar foto") */
+  #wa-modal .avatar .on{position:absolute;right:1px;bottom:1px;width:13px;height:13px;border-radius:50%;background:var(--wa);border:2.5px solid var(--wa-head-b);}
+  #wa-modal .who{display:flex;flex-direction:column;gap:2px;min-width:0;}
+  #wa-modal .nm{font-family:var(--wa-head-font);font-weight:700;font-size:1.15rem;letter-spacing:-.01em;}
+  #wa-modal .cred{font-size:.72rem;font-weight:500;color:rgba(255,255,255,.92);line-height:1.35;}
+  #wa-modal .online{display:flex;align-items:center;gap:.45rem;padding:.55rem 1.25rem;background:var(--wa-band);font-size:.74rem;font-weight:600;color:var(--wa-head-b);}
+  #wa-modal .online .dot{width:7px;height:7px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 3px rgba(37,211,102,.25);}
+  #wa-modal .wbody{padding:1.2rem 1.25rem 1.4rem;}
+  #wa-modal .lead-line{font-family:var(--wa-head-font);font-size:1.3rem;font-weight:600;line-height:1.25;letter-spacing:-.01em;margin-bottom:1rem;color:var(--wa-head-b);}
+  #wa-modal .field{display:block;margin-bottom:1rem;}
+  #wa-modal .field .lbl{display:block;font-size:.74rem;font-weight:600;color:var(--wa-head-b);margin-bottom:.35rem;}
+  #wa-modal .field input{width:100%;height:48px;border-radius:12px;border:1.5px solid var(--wa-line);background:#fff;color:var(--wa-ink);padding:0 .9rem;font-size:1rem;font-family:var(--wa-body-font);outline:none;transition:border-color .15s,box-shadow .15s;}
+  #wa-modal .field input::placeholder{color:#b3b3b3;}
+  #wa-modal .field input:focus{border-color:var(--wa-accent);box-shadow:0 0 0 3px rgba(245,166,35,.22);}
+  #wa-modal .field input.wa-err,#wa-modal .field input.wa-err:focus{border-color:#e5484d;box-shadow:0 0 0 3px rgba(229,72,77,.2);}
+  #wa-modal .wa-err-msg{display:block;margin-top:.4rem;font-size:.74rem;font-weight:600;color:#e5484d;line-height:1.35;}
+  #wa-modal .btn{width:100%;height:52px;border:none;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--wa-head-font);font-size:1rem;font-weight:600;color:#fff;background:var(--wa);transition:filter .15s,transform .1s;}
+  #wa-modal .btn:hover{filter:brightness(1.05);}
+  #wa-modal .btn:active{transform:translateY(1px);}
+  #wa-modal .btn .wa-ic{width:21px;height:21px;}
+  #wa-modal .warn-body{padding:1.2rem 1.25rem 1.4rem;}
+  #wa-modal .notice{background:#FFF4E8;border:1.5px solid #FFD8AC;border-radius:16px;padding:1.15rem 1.2rem 1.25rem;margin-bottom:1.1rem;}
+  #wa-modal .notice-head{display:inline-flex;align-items:center;gap:.55rem;padding:.5rem .95rem;margin-bottom:.95rem;border-radius:999px;background:var(--wa-accent-d);color:#fff;font-family:var(--wa-head-font);font-weight:700;font-size:.98rem;letter-spacing:.01em;}
+  #wa-modal .notice-head .ic{width:1.2rem;height:1.2rem;}
+  #wa-modal .notice p{font-size:1rem;line-height:1.55;color:var(--wa-ink);margin:0 0 .65rem;}
+  #wa-modal .notice p:last-child{margin-bottom:0;}
+  #wa-modal .notice b{font-weight:700;}
+  #wa-modal .notice .num{font-family:var(--wa-head-font);font-weight:700;color:var(--wa-accent-d);white-space:nowrap;}
+  #wa-modal .num-reinforce{text-align:center;font-size:.9rem;color:var(--wa-accent-d);margin:.8rem 0 0;}
+  #wa-modal .num-reinforce b{font-family:var(--wa-head-font);font-weight:700;color:var(--wa-head-b);white-space:nowrap;}
+  #wa-modal .back{display:block;width:100%;text-align:center;margin-top:.75rem;background:none;border:none;color:var(--wa-muted);font-size:.8rem;cursor:pointer;font-family:var(--wa-body-font);}
+  #wa-modal .back:hover{color:var(--wa-head-b);}
+
+#wa-modal,.wafloat{
+  --wa:#25D366;
+  --wa-head-a:var(--juliano-surface);--wa-head-b:var(--juliano-ink);
+  --wa-accent:var(--juliano-accent);--wa-accent-d:var(--juliano-accent-deep,var(--juliano-accent));
+  --wa-band:var(--juliano-clay,var(--juliano-paper-2,var(--juliano-paper)));--wa-surface:var(--juliano-surface);--wa-line:var(--juliano-hair-forte);
+  --wa-ink:var(--juliano-ink);--wa-muted:var(--juliano-ink-3);
+  --wa-head-font:var(--juliano-display);--wa-body-font:var(--juliano-body);
+}
+/* header claro e centrado, foto com o contorno fino deslocado, sem bloco de cor. O X mora no canto e o texto do header e centrado e estreito: nunca se cruzam. */
+#wa-modal .widget{width:400px;max-height:calc(100dvh - 24px);overflow-y:auto;border-radius:20px;box-shadow:var(--juliano-sombra-foto,0 24px 60px -20px rgba(0,0,0,.35))}
+#wa-modal .wa-close{width:44px;height:44px;top:10px;right:10px;background:var(--juliano-paper-2,var(--juliano-paper));color:var(--juliano-ink);border:1px solid var(--juliano-hair);transition:background var(--juliano-dur,.2s) var(--juliano-ease,ease)}
+#wa-modal .wa-close:hover{background:var(--juliano-clay,var(--juliano-paper-2,var(--juliano-paper)))}
+#wa-modal .wa-close svg{width:18px;height:18px}
+#wa-modal .whead{flex-direction:column;justify-content:center;gap:.9rem;padding:1.9rem 1.5rem 1.35rem;background:var(--juliano-surface);color:var(--juliano-ink);text-align:center}
+#wa-modal .avatar{width:88px;height:88px;border:0;background:none;display:block;margin:0 6px 0 0}
+#wa-modal .avatar::before{content:"";position:absolute;inset:0;border:1.5px solid var(--juliano-accent);border-radius:50%;transform:translate(6px,5px)}
+#wa-modal .avatar img{position:relative;box-shadow:0 0 0 3px var(--juliano-surface)}
+#wa-modal .who{align-items:center;gap:.3rem}
+#wa-modal .nm{font-weight:400;font-size:1.25rem;color:var(--juliano-ink)}
+#wa-modal .cred{font-size:.9375rem;font-weight:400;color:var(--juliano-ink-2);line-height:1.4}
+#wa-modal .online{justify-content:center;gap:.55rem;padding:.7rem 1.5rem;border-top:1px solid var(--juliano-hair);font-size:.9375rem;font-weight:500;color:var(--juliano-ink)}
+#wa-modal .online .ico{flex:none;width:20px;height:20px;color:var(--juliano-accent-deep,var(--juliano-accent))}
+#wa-modal .wbody{padding:1.6rem 1.5rem 1.75rem}
+#wa-modal .lead-line{font-weight:400;font-size:1.45rem;letter-spacing:.02em;line-height:1.3;text-align:center;text-wrap:balance;margin-bottom:1.25rem}
+#wa-modal .field{margin-bottom:.55rem}
+#wa-modal .field .lbl{font-size:1rem;font-weight:500;color:var(--juliano-ink);margin-bottom:.4rem}
+#wa-modal .field input{font-size:1.125rem;height:52px;border-color:var(--juliano-hair-forte)}
+#wa-modal .field input::placeholder{color:var(--juliano-ink-3)}
+#wa-modal .field input:focus{border-color:var(--juliano-ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--juliano-accent) 30%,transparent)}
+#wa-modal .wa-hint{margin:0 0 1.3rem;font-size:.9375rem;line-height:1.45;color:var(--juliano-ink-2)}
+#wa-modal .wa-err-msg{font-size:1rem;font-weight:500;color:var(--juliano-erro,#A03A34)}
+#wa-modal .field input.wa-err,#wa-modal .field input.wa-err:focus{border-color:var(--juliano-erro,#A03A34);box-shadow:0 0 0 3px color-mix(in srgb,var(--juliano-erro,#A03A34) 20%,transparent)}
+#wa-modal .btn{font-family:var(--juliano-body);font-weight:500;font-size:1.0625rem;letter-spacing:.01em;color:var(--juliano-on-accent);background:var(--juliano-cta-gradient,linear-gradient(180deg,var(--juliano-accent) 0%,var(--juliano-accent-deep,var(--juliano-accent)) 100%));box-shadow:var(--juliano-sombra-btn,0 0 0 0 transparent);border-radius:var(--juliano-r-btn,12px)}
+#wa-modal .btn:hover{filter:none;background:var(--juliano-cta-gradient-hover,var(--juliano-cta-gradient,linear-gradient(180deg,var(--juliano-accent) 0%,var(--juliano-accent-deep,var(--juliano-accent)) 100%)));box-shadow:var(--juliano-sombra-btn-hover,var(--juliano-sombra-btn,0 0 0 0 transparent))}
+#wa-modal .btn .wa-ic{fill:currentColor}
+#wa-modal :focus-visible{outline:2px solid var(--juliano-ink);outline-offset:3px}
+/* tela 2: o X ocupa a faixa de cima (44px + 10px), o aviso comeca abaixo dela */
+#wa-modal .warn-body{padding:3.5rem 1.5rem 1.6rem}
+#wa-modal .notice{background:var(--juliano-paper);border:1px solid var(--juliano-hair-forte);border-radius:16px;padding:1.25rem 1.3rem 1.35rem}
+#wa-modal .notice-head{padding:0;border-radius:0;background:none;color:var(--juliano-ink);gap:.6rem;margin-bottom:.8rem;font-family:var(--juliano-display);font-weight:400;font-size:1.125rem;letter-spacing:.02em;line-height:1.3}
+#wa-modal .notice-head .ic{flex:none;width:1.5rem;height:1.5rem;color:var(--juliano-accent-deep,var(--juliano-accent))}
+#wa-modal .notice p{font-size:1.0625rem}
+#wa-modal .notice .num,#wa-modal .num-reinforce b{font-family:var(--juliano-body);font-weight:500}
+#wa-modal .num-reinforce{font-size:1rem;color:var(--juliano-ink-2)}
+#wa-modal .back{font-size:1rem;min-height:44px;color:var(--juliano-ink-2);text-decoration:underline;text-underline-offset:3px}
+@media (max-height:700px){
+  #wa-modal .whead{padding-top:1.5rem;gap:.7rem}
+  #wa-modal .avatar{width:72px;height:72px}
+  #wa-modal .wbody{padding-top:1.25rem}
+  #wa-modal .lead-line{margin-bottom:1rem}
+}
+/* flutuante na cor da marca, com anel do fundo: sem ele o botao some sobre faixas de cor */
+.wafloat{right:28px;bottom:28px;width:60px;height:60px;background:var(--juliano-cta-gradient,linear-gradient(180deg,var(--juliano-accent) 0%,var(--juliano-accent-deep,var(--juliano-accent)) 100%));box-shadow:0 0 0 3px var(--juliano-paper),var(--juliano-sombra-btn,0 0 0 0 transparent);transition:transform var(--juliano-dur,.2s) var(--juliano-ease,ease),box-shadow var(--juliano-dur,.2s) var(--juliano-ease,ease)}
+.wafloat svg{fill:var(--juliano-on-accent)}
+.wafloat:hover{transform:translateY(-2px);box-shadow:0 0 0 3px var(--juliano-paper),var(--juliano-sombra-btn-hover,var(--juliano-sombra-btn,0 0 0 0 transparent))}
+@media (prefers-reduced-motion:reduce){#wa-modal .screen.active{animation:none}}
+/* widget:fim */
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-badge" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></symbol>
+    <symbol id="i-steto" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-nav" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol>
+    <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  </defs>
+</svg>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo-site" data-bloco="header">
+  <div class="wrap">
+    <a class="marca" href="#conteudo" aria-label="Dr. Juliano Reis, Médico, CRM-MG 63389 · Cardiologia, RQE 45159">
+      <img src="assets/simbolo-claro.svg" width="50" height="50" alt="" decoding="async">
+      <span class="wm"><b>Dr. Juliano Reis</b><span>Médico, CRM-MG 63389 · Cardiologia, RQE 45159</span></span>
+    </a>
+    <button class="btn" type="button" data-wa>Agendar</button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="hero" data-bloco="hero">
+  <div class="wrap">
+    <h1>Cuido do coração e do resto junto, na mesma consulta.</h1>
+    <p class="sub">Pressão alta e check-up do adulto, vistos por inteiro, <span class="uti">por quem coordena a UTI Cardiovascular.</span></p>
+    <figure class="foto"><img src="fotos/juliano-retrato.jpg" width="560" height="700" alt="Dr. Juliano Reis, de camisa polo azul-marinho, sentado diante de uma parede cinza-bege, olhando para a câmera." fetchpriority="high"></figure>
+    <div class="id">
+      <p class="nome">Dr. Juliano Reis</p>
+      <p class="crm">Médico, CRM-MG 63389</p>
+      <p class="cred">Mestre em Ciências Cardiovasculares.</p>
+    </div>
+    <p class="rqe"><span>Cardiologia, RQE 45159</span><span>Clínica Médica, RQE 38344</span><span>Terapia Intensiva, RQE 55623</span></p>
+    <div class="acoes">
+      <button class="btn" type="button" data-wa>Agendar consulta <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
+    </div>
+  </div>
+  <span class="ripado" aria-hidden="true"></span>
+</section>
+
+<section class="beneficios" data-bloco="beneficios" aria-label="Como funciona o atendimento">
+  <div class="wrap">
+    <ul>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg><span>Consulta de cerca de 30 minutos, com hora marcada</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-steto"/></svg><span>Três especialidades com RQE, que você confere abaixo</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>Em Varginha, terça, quarta e quinta</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="servicos" data-bloco="servicos">
+  <div class="wrap">
+    <div class="cab">
+      <h2>O que olho na consulta</h2>
+      <span class="filete" role="presentation"></span>
+      <p>Pressão, exames e sintomas entram na mesma conversa. Eu olho o seu caso de ponta a ponta e explico o que faz sentido investigar.</p>
+      <div class="fecho">
+        <p>Se um desses é o seu caso, mande uma mensagem pelo WhatsApp e veja os horários livres.</p>
+        <button class="btn" type="button" data-wa>Agendar consulta <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
+      </div>
+    </div>
+    <ul class="itens">
+      <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><div><h3>Pressão alta ou que oscila</h3><p>Pressão alta, ou que sobe e desce. A gente olha o padrão, os exames e os remédios que você já usa, e define o próximo passo.</p></div></li>
+      <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><h3>Check-up do adulto</h3><p>Olho coração, pressão e exames juntos. Explico o que faz sentido pedir no seu caso e por quê.</p></div></li>
+      <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg><div><h3>Exame que veio alterado</h3><p>Traga o resultado. Eu explico o que ele significa no seu caso e se pede mais exames ou acompanhamento.</p></div></li>
+      <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg><div><h3>Cansaço, palpitação ou medo do coração</h3><p>Esses sintomas têm causas diferentes, nem todas no coração. Escuto a sua história, examino e explico o que vale investigar.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="porque" data-bloco="porque">
+  <div class="wrap">
+    <div class="cab">
+      <h2>O que a UTI traz para o consultório</h2>
+      <span class="filete" role="presentation"></span>
+    </div>
+    <div class="corpo">
+      <p class="abre">Coordeno a UTI Cardiovascular. Lá, a gente olha o paciente inteiro: coração, pressão, rins, pulmão e remédios juntos. No consultório, a situação é outra e o olhar é o mesmo.</p>
+      <p>A primeira consulta dura cerca de 30 minutos, com hora marcada. Escuto a sua história, olho o seu caso como um todo e explico o que faz sentido pedir e por quê. Sem pressa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="prova" data-bloco="prova">
+  <div class="wrap">
+    <div class="cab">
+      <h2>Registros que você pode conferir</h2>
+      <span class="filete" role="presentation"></span>
+      <p>Os números são públicos: dá para conferir no portal do CFM. A formação está no currículo Lattes.</p>
+    </div>
+    <div class="corpo">
+    <dl class="regs">
+      <div class="reveal"><dt>Médico, CRM-MG</dt><dd>63389</dd></div>
+      <div class="reveal"><dt>Cardiologia, RQE</dt><dd>45159</dd></div>
+      <div class="reveal"><dt>Clínica Médica, RQE</dt><dd>38344</dd></div>
+      <div class="reveal"><dt>Terapia Intensiva, RQE</dt><dd>55623</dd></div>
+    </dl>
+    <p class="mestrado">Mestre em Ciências Cardiovasculares, FELUMA, 2023 a 2025. Artigos publicados em revistas científicas, como a Scientific Reports (Nature Portfolio).</p>
+    <p class="links"><a class="link-seta" href="https://portal.cfm.org.br/busca-medicos/" target="_blank" rel="noopener">Conferir no portal do CFM <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
+    <p class="links"><a class="link-seta" href="https://lattes.cnpq.br/9483119161975354" target="_blank" rel="noopener">Ver o currículo Lattes, atualizado em abril de 2026 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
+    </div>
+  </div>
+</section>
+
+<section class="faq" data-bloco="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <span class="filete" role="presentation"></span>
+    <div class="lista">
+      <details open><summary>Preciso ter algum sintoma para marcar?</summary><p>Não. Pressão alta pode ser silenciosa: você pode ter e não sentir nada. O check-up serve para olhar com calma, sem precisar de queixa.</p></details>
+      <details><summary>O que entra no check-up do adulto?</summary><p>Depende da sua idade, do seu histórico e dos seus exames. Isso eu só digo olhando o seu caso. Na consulta, explico o que faz sentido pedir e por quê.</p></details>
+      <details><summary>Quanto dura a consulta?</summary><p>A primeira consulta dura cerca de 30 minutos, com hora marcada. O retorno é mais curto. Esse tempo é para ouvir a sua história e olhar o seu caso.</p></details>
+      <details><summary>Preciso levar exames?</summary><p>Leve os exames e as receitas recentes, se tiver. Eles ajudam a olhar o caso. Se não tiver nenhum, tudo bem: a consulta começa pela sua história.</p></details>
+      <details><summary>Quais dias o Dr. Juliano atende?</summary><p>Terça, quarta e quinta, no consultório em Varginha. Os horários livres você vê pelo WhatsApp.</p></details>
+      <details><summary>Posso falar de vida sexual na consulta?</summary><p>Pode, como qualquer outro assunto. Falar disso ajuda a olhar o seu caso. Se preferir, é só dizer na consulta que quer conversar sobre isso.</p></details>
+      <details><summary>Uso anabolizante ou suplemento. Posso falar disso na consulta?</summary><p>Pode. Contar o que você usa muda o jeito como olho o coração e a pressão. É uma conversa de consulta, sem julgamento e sem sermão: eu ouço, olho o seu caso e explico o que faz sentido.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="local" data-bloco="local">
+  <div class="wrap">
+    <figure class="foto-c"><img src="fotos/consultorio.jpg" width="1279" height="959" alt="Dr. Juliano Reis, de jaleco branco, sentado à mesa de mármore no consultório, com painel ripado e estantes ao fundo e a placa com o nome na parede." loading="lazy" decoding="async"></figure>
+    <div class="corpo">
+      <div class="cab">
+        <h2>Onde atendo</h2>
+        <span class="filete" role="presentation"></span>
+        <p>Consultório próprio, em Varginha, MG.</p>
+      </div>
+      <dl>
+        <div class="linha-l"><dt>Endereço</dt><dd>R. Dr. Arnaldo, 135, sala 12, Vila Pinto, Varginha, MG. CEP 37014-030.</dd></div>
+        <div class="linha-l"><dt>Dias</dt><dd>Terça, quarta e quinta.</dd></div>
+        <div class="linha-l"><dt>Consulta</dt><dd>Cerca de 30 minutos na primeira, com hora marcada.</dd></div>
+        <div class="linha-l"><dt>Como marcar</dt><dd>Pelo WhatsApp, no botão Agendar consulta.</dd></div>
+      </dl>
+      <p><a class="link-seta" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Dr.+Arnaldo,+135,+Vila+Pinto,+Varginha,+MG" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nav"/></svg>Como chegar</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" data-bloco="cta-final">
+  <div class="wrap">
+    <img src="assets/simbolo-escuro.svg" width="64" height="64" alt="" loading="lazy" decoding="async">
+    <h2>Marque a sua consulta em Varginha</h2>
+    <p>Mande uma mensagem pelo WhatsApp, veja os horários livres de terça, quarta e quinta e escolha o que encaixa na sua rotina.</p>
+    <button class="btn claro" type="button" data-wa>Agendar consulta <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape" data-bloco="rodape">
+  <span class="ripado" aria-hidden="true"></span>
+  <div class="wrap">
+    <a class="marca" href="#conteudo" aria-label="Dr. Juliano Reis">
+      <img src="assets/simbolo-claro.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+      <span class="wm"><b>Dr. Juliano Reis</b><span>Médico, CRM-MG 63389</span></span>
+    </a>
+    <p class="esp leg">Cardiologia (RQE 45159), Clínica Médica (RQE 38344) e Terapia Intensiva (RQE 55623)</p>
+    <p class="end leg">R. Dr. Arnaldo, 135, sala 12, Vila Pinto, Varginha, MG. CEP 37014-030.</p>
+    <p class="leg">Este site tem caráter informativo e não substitui a consulta médica.</p>
+  </div>
+</footer>
+
+<!-- float (desktop): fixo na tela em toda a rolagem. Nao e bloco, e elemento permanente. O canonico vem junto do widget, abaixo. -->
+
+<!-- sticky (mobile): o caminho pro WhatsApp acompanha a rolagem inteira -->
+<div class="sticky" data-bloco="cta-flutuante">
+  <button class="btn" type="button" data-wa>Agendar consulta <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
+  <noscript><a class="btn" href="https://wa.me/5535988334600?text=Ol%C3%A1%2C%20Dr.%20Juliano!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20consulta.">Agendar consulta</a></noscript>
+</div>
+
+<script>
+(function(){
+var COOKIE_NAME = 'tracker';
+var TTL_DAYS = 365;
+var MAX_URL_LEN = 500;
+var KEYS = ['gclid','gbraid','wbraid','gad_source','gad_campaignid','ttclid','msclkid','oppref','obref','fbp','fbc','utm_source','utm_medium','utm_campaign','session_start_usec','landing_page_url'];
+function readCookie(){ var out = {}; try { var parts = (document.cookie || '').split(';'); for (var i = 0; i < parts.length; i++) { var kv = parts[i].split('='); var k = (kv[0] || '').trim(); if (k === COOKIE_NAME) { try { out = JSON.parse(decodeURIComponent((kv.slice(1).join('=')) || '{}')) || {}; } catch (e) {} } } } catch (e) {} return out; }
+function writeCookie(data){ try { var exp = new Date(Date.now() + TTL_DAYS * 864e5).toUTCString(); document.cookie = COOKIE_NAME + '=' + encodeURIComponent(JSON.stringify(data)) + '; expires=' + exp + '; path=/; SameSite=Lax'; } catch (e) {} }
+// Corta a URL de pouso. E o unico campo sem tamanho definido, e cookie acima de 4 KB o navegador recusa calado, levando junto o click id.
+function pageUrl(){ try { return String(location.href || '').slice(0, MAX_URL_LEN); } catch (e) { return ''; } }
+function fromUrl(){ var out = {}; try { var q = new URLSearchParams(location.search); out.gclid = q.get('gclid') || ''; out.gbraid = q.get('gbraid') || ''; out.wbraid = q.get('wbraid') || ''; out.gad_source = q.get('gad_source') || ''; out.gad_campaignid = q.get('gad_campaignid') || ''; out.ttclid = q.get('ttclid') || ''; out.msclkid = q.get('msclkid') || ''; out.oppref = q.get('oppref') || ''; out.obref = q.get('obref') || ''; out.fbp = q.get('fbp') || ''; out.fbc = q.get('fbc') || ''; out.utm_source = q.get('utm_source') || ''; out.utm_medium = q.get('utm_medium') || ''; out.utm_campaign = q.get('utm_campaign') || ''; } catch (e) {} return out; }
+function fromCookies(){ var out = { fbp: '', fbc: '' }; try { var parts = (document.cookie || '').split(';'); for (var i = 0; i < parts.length; i++) { var kv = parts[i].split('='); var k = (kv[0] || '').trim(); var v = decodeURIComponent((kv.slice(1).join('=')) || ''); if (k === '_fbp' && !out.fbp) out.fbp = v; if (k === '_fbc' && !out.fbc) out.fbc = v; } } catch (e) {} return out; }
+// Resgate: le o gclid do cookie do proprio Google quando o nosso cookie ainda nao tem.
+// _gcl_aw vale "GCL.<ts>.<gclid>" e _gac_<propriedade> vale "<versao>.<ts>.<gclid>": nos dois o id e o trecho apos o ultimo ponto.
+// O prefixo TEM que sair aqui: o SQL valida com ^[A-Za-z0-9_-]{40,} e o ponto faz o valor cru virar NULL calado.
+// So gclid. gbraid e wbraid vem so da URL, de proposito: click id de iOS lido de cookie gera erro de identificador antigo no Google Ads.
+function gclFromValue(v){ try { var s = decodeURIComponent(v || ''); var i = s.lastIndexOf('.'); return i < 0 ? '' : s.slice(i + 1); } catch (e) { return ''; } }
+function fromGoogleCookies(){ var out = { gclid: '' }; try { var parts = (document.cookie || '').split(';'); var gac = ''; for (var i = 0; i < parts.length; i++) { var kv = parts[i].split('='); var k = (kv[0] || '').trim(); var v = kv.slice(1).join('='); if (k === '_gcl_aw' && !out.gclid) out.gclid = gclFromValue(v); else if (k.indexOf('_gac_') === 0 && !gac) gac = gclFromValue(v); } if (!out.gclid) out.gclid = gac; } catch (e) {} return out; }
+// Precedencia: URL vence o nosso cookie, que vence o cookie do Google. Valor vazio nunca sobrescreve valor cheio.
+function capture(){ var stored = readCookie(); var url = fromUrl(); var ck = fromCookies(); var hasUrl = false; for (var i = 0; i < KEYS.length; i++) { if (url[KEYS[i]]) { hasUrl = true; break; } } var data = {}; for (var j = 0; j < KEYS.length; j++) { var k = KEYS[j]; data[k] = stored[k] || ''; } var rescued = false; if (!data.gclid) { var g = fromGoogleCookies(); if (g.gclid) { data.gclid = g.gclid; rescued = true; } } if (hasUrl) { for (var m = 0; m < KEYS.length; m++) { var k2 = KEYS[m]; if (url[k2]) data[k2] = url[k2]; } if (!data.session_start_usec) data.session_start_usec = String(Date.now() * 1000); if (!data.landing_page_url) data.landing_page_url = pageUrl(); writeCookie(data); return data; } if (!data.fbp && ck.fbp) data.fbp = ck.fbp; if (!data.fbc && ck.fbc) data.fbc = ck.fbc; if (!stored.session_start_usec) { data.session_start_usec = String(Date.now() * 1000); data.landing_page_url = pageUrl(); writeCookie(data); } else if (rescued) { writeCookie(data); } return data; }
+var current = capture();
+window.trackerData = function(){ try { var d = JSON.parse(JSON.stringify(current || {})); try { d.user_agent = (typeof navigator !== 'undefined' && navigator.userAgent) || ''; } catch (e2) {} return d; } catch (e) { return {}; } };
+if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', capture); } })();
+</script>
+
+<!-- gatilho flutuante default (opcional; remova se a LP só usa botões próprios) -->
+<button class="wafloat" data-wa aria-label="Falar pelo WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.5c1.8.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
+</button>
+
+<dialog id="wa-modal" aria-label="Falar pelo WhatsApp">
+  <div class="widget">
+    <button type="button" class="wa-close" data-wa-close aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <!-- tela 1: captura -->
+    <div class="screen active" id="wa-s1">
+      <div class="whead">
+        <span class="avatar foto">
+          <img src="fotos/juliano-retrato.jpg" alt="Retrato do Dr. Juliano Reis" width="96" height="96" decoding="async">
+        </span>
+        <div class="who">
+          <span class="nm">Dr. Juliano Reis</span>
+          <span class="cred">Médico · CRM-MG 63389 · Cardiologia RQE 45159</span>
+          <span class="cred">Clínica Médica · RQE 38344</span>
+        </div>
+      </div>
+      <div class="online"><span class="dot"></span>Consultório em Varginha, MG</div>
+      <div class="wbody">
+        <div class="lead-line">Agende sua consulta</div>
+        <label class="field">
+          <span class="lbl">Seu WhatsApp</span>
+          <input id="wa-phone" type="tel" inputmode="tel" placeholder="(00) 0 0000-0000" autocomplete="tel" data-1p-ignore data-lpignore="true" aria-describedby="wa-dica" data-wa-err="Digite seu WhatsApp com DDD, por exemplo 35 99999-9999.">
+        </label>
+        <p class="wa-hint" id="wa-dica">Só usamos seu número para responder a você.</p>
+        <button class="btn" id="wa-go" type="button">
+          <svg class="wa-ic" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>
+          Continuar no WhatsApp
+        </button>
+      </div>
+    </div>
+    <!-- tela 2: aviso de "número desconhecido" -->
+    <div class="screen" id="wa-s2">
+      <div class="warn-body">
+        <div class="notice">
+          <div class="notice-head">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            Antes de abrir o WhatsApp
+          </div>
+          <p>Ao abrir o WhatsApp, pode aparecer um aviso de <b>"número desconhecido"</b>.</p>
+          <p><b>Isso é normal.</b> O número <b class="num" data-wa-num></b>, da <b>Dr. Juliano Reis</b>, é oficial.</p>
+          <p>É só clicar em <b>Continuar</b> para falar com o Dr. Juliano.</p>
+        </div>
+        <button class="btn" id="wa-last-step" type="button">
+          <svg class="wa-ic" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35z"/></svg>
+          Continuar para o WhatsApp
+        </button>
+        <p class="num-reinforce">Você vai falar com <b data-wa-num></b></p>
+        <button class="back" id="wa-back" type="button">voltar</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var WEBHOOK_URL = 'https://n8n.srv1732310.hstgr.cloud/webhook/widget-lead?t=juliano';
+  // UNICO lugar do numero do WhatsApp (digitos com DDI). Trocou o numero? Troque so esta linha e o noscript: o link e o numero exibido no aviso saem daqui.
+  var WA_PHONE = '5535988334600';
+  var WA = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent('Olá, Dr. Juliano! Vim pelo seu site e gostaria de marcar uma consulta.');
+  (function(){ var d = WA_PHONE.replace(/\D/g, ''); var f = '(' + d.slice(2,4) + ') ' + d.slice(4,5) + ' ' + d.slice(5,9) + '-' + d.slice(9); document.querySelectorAll('[data-wa-num]').forEach(function(n){ n.textContent = f; }); })();
+  var modal = document.getElementById('wa-modal'), s1 = document.getElementById('wa-s1'), s2 = document.getElementById('wa-s2');
+  function show(el){ s1.classList.remove('active'); s2.classList.remove('active'); el.classList.add('active'); var w=modal.querySelector('.widget'); if(w) w.scrollTop=0; }
+  function openModal(){ show(s1); if(modal.showModal){ if(!modal.open) modal.showModal(); } else { modal.setAttribute('open',''); } setTimeout(function(){ var p=document.getElementById('wa-phone'); if(p) p.focus(); }, 60); }
+  function closeModal(){ if(modal.close) modal.close(); else modal.removeAttribute('open'); }
+  document.querySelectorAll('[data-wa]').forEach(function(b){ b.addEventListener('click', openModal); });
+  modal.querySelectorAll('[data-wa-close]').forEach(function(b){ b.addEventListener('click', closeModal); });
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+  // validação WhatsApp BR: DDD + 8 ou 9 dígitos (tolera DDI 55). '' = inválido.
+  function waValidPhone(raw){ var d=(raw||'').replace(/\D/g,''); if((d.length===12||d.length===13)&&d.slice(0,2)==='55') d=d.slice(2); return (d.length===10||d.length===11)&&d.charAt(0)!=='0' ? d : ''; }
+  // Internacional: comeca com "+" e nao e 55 (o 55 cai no validador BR acima). 8 a 15 digitos, sem 0 na frente (E.164). Devolve so os digitos; '' = invalido.
+  function waValidIntl(raw){ if(!/^\s*\+/.test(raw||'')) return ''; var d=raw.replace(/\D/g,''); if(d.slice(0,2)==='55') return ''; return (d.length>=8&&d.length<=15&&d.charAt(0)!=='0') ? d : ''; }
+  // Normalizacao E.164 do telefone (mesma regra do servidor, conversa.py). Recebe entrada JA VALIDADA de waValidPhone.
+  function telefoneE164(t) { var d = String(t || '').replace(/\D/g, ''); if ((d.length === 10 || d.length === 11) && d.slice(0, 2) !== '55') { d = '55' + d; } if (d.length === 12 && d.slice(0, 2) === '55') { d = d.slice(0, 4) + '9' + d.slice(4); } return d; }
+  // Telefone final em E.164 (so digitos): internacional com "+" ou brasileiro. '' = invalido.
+  function waPhoneE164(raw){ var i=waValidIntl(raw); if(i) return i; var br=waValidPhone(raw); return br ? telefoneE164(br) : ''; }
+  // Normalizacao de e-mail (opcional, pra sites que coletam). Retorna '' se invalido.
+  function emailNorm(raw){ var e=(raw||'').trim().toLowerCase(); return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e) ? e : ''; }
+  // Captura click id: tracker primeiro (cookie _gcl_aw), depois URL. Retorna sempre as tres chaves, com string vazia quando nao ha valor.
+  function clickIds(){ var q=new URLSearchParams(location.search); var t={}; try{ if(window.trackerData) t=window.trackerData()||{}; }catch(e){} return { gclid: t.gclid || q.get('gclid') || '', gbraid: t.gbraid || q.get('gbraid') || '', wbraid: t.wbraid || q.get('wbraid') || '' }; }
+  function waErr(input,on){ input.classList.toggle('wa-err',on); var m=input.parentNode.querySelector('.wa-err-msg'); if(on&&!m){ m=document.createElement('span'); m.className='wa-err-msg'; m.textContent=input.getAttribute('data-wa-err')||'Digite seu WhatsApp com DDD (ex.: 31 90000-0000)'; input.parentNode.appendChild(m); } else if(m){ m.style.display=on?'block':'none'; } if(on) input.focus(); }
+  (function(){ var _p=document.getElementById('wa-phone'); if(_p) _p.addEventListener('input',function(){ if(this.classList.contains('wa-err')) waErr(this,false); }); })();
+  document.getElementById('wa-go').addEventListener('click', function(){
+    var input=document.getElementById('wa-phone'), phone=waPhoneE164(input.value);
+    if(!phone){ waErr(input,true); return; }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event:'lead_whatsapp', user_data:{phone_number:'+' + phone}});
+    if(WEBHOOK_URL){ var sep = WEBHOOK_URL.indexOf('?')<0?'?':'&'; var ids=clickIds(); var qs='phone='+encodeURIComponent(phone)+'&gclid='+encodeURIComponent(ids.gclid)+'&gbraid='+encodeURIComponent(ids.gbraid)+'&wbraid='+encodeURIComponent(ids.wbraid); try{ fetch(WEBHOOK_URL+sep+qs,{method:'POST',keepalive:true}); }catch(e){} }
+    show(s2);
+  });
+  document.getElementById('wa-back').addEventListener('click', function(){ show(s1); });
+  document.getElementById('wa-last-step').addEventListener('click', function(){
+    window.open(WA, '_blank');
+  });
+})();
+</script>
+
+<script>
+/* barra fixa do celular: some enquanto o botao do hero esta na tela (um botao por dobra) */
+(function(){
+  var b=document.querySelector('.hero .acoes .btn'), st=document.querySelector('.sticky');
+  if(!b||!st||!('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(es){ st.classList.toggle('oculta', es[0].isIntersecting); }, {threshold:1}).observe(b);
+})();
+</script>
+<script>
+/* .reveal: o script so esconde depois de confirmar que roda e que ha IntersectionObserver */
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.documentElement.classList.remove('js'); return;
+  }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
