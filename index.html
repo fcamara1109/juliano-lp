@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dr. Juliano Reis, médico cardiologista (RQE 45159)</title>
+<title>Dr. Juliano Reis, cardiologista em Varginha (RQE 45159)</title>
 <!--
 Função: site do Dr. Juliano Reis (cardiologista e clínica médica, CRM-MG 63389, Varginha), página única na espinha do blueprint de LP de médico, mais a barra de autoridade (beneficios) e o widget de WhatsApp. O texto mora em copy.md (um bloco ## chave por pedaço); o index.html é gerado por marketing-agency/sites/_shared/monta_site.py e nunca se edita.
 Data: 2026-11-09. Marca: external/doctors/juliano/wiki/concepts/marca-juliano (tokens.css copiado para assets/tokens.css, copia de deploy). Ícones: Lucide v0.475.0 (licença ISC), em sprite no começo do body.
 Preview noindex em fcamara1109/juliano-lp. Premissas, desvios e pendências: README.md desta pasta.
 -->
-<meta name="description" content="Dr. Juliano Reis, médico (CRM-MG 63389) e cardiologista (RQE 45159) em Varginha, MG. Consulta de cerca de 30 minutos, com hora marcada.">
+<meta name="description" content="Dr. Juliano Reis, médico (CRM-MG 63389) e cardiologista (RQE 45159) em Varginha, MG. Coordena a UTI Cardiovascular. Consulta de cerca de 30 minutos, com hora marcada.">
 <meta name="theme-color" content="#F5F2EC">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -19,13 +19,13 @@ Preview noindex em fcamara1109/juliano-lp. Premissas, desvios e pendências: REA
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Dr. Juliano Reis">
 <meta property="og:title" content="Cuido do coração e do resto junto, na mesma consulta">
-<meta property="og:description" content="Médico, CRM-MG 63389. Cardiologia, RQE 45159. Consulta de cerca de 30 minutos em Varginha, MG.">
+<meta property="og:description" content="Médico, CRM-MG 63389. Cardiologia, RQE 45159. Pressão alta, exame alterado e check-up do adulto em Varginha, MG.">
 <meta property="og:image" content="https://fcamara1109.github.io/juliano-lp/assets/og-1200x630.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cuido do coração e do resto junto, na mesma consulta">
-<meta name="twitter:description" content="Médico, CRM-MG 63389. Cardiologia, RQE 45159. Consulta de cerca de 30 minutos em Varginha, MG.">
+<meta name="twitter:description" content="Médico, CRM-MG 63389. Cardiologia, RQE 45159. Pressão alta, exame alterado e check-up do adulto em Varginha, MG.">
 <link rel="preload" href="assets/fonts/Jost.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="assets/fonts/Newsreader.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/tokens.css">
@@ -129,8 +129,6 @@ h3{font-size:22px;line-height:1.25}
 .urgencia .ico{margin-top:2px;color:var(--juliano-bronze)}
 .urgencia h3{margin:0 0 6px}
 .urgencia p{margin:0;color:var(--juliano-ink)}
-.reveal{transition:opacity .7s var(--juliano-ease),transform .7s var(--juliano-ease)}
-.js .reveal:not(.in){opacity:0;transform:translateY(12px)}
 
 /* ---------- porque: papel. O titulo de um lado, a voz dele do outro ---------- */
 .porque{background:var(--juliano-paper);padding:var(--juliano-e-6) 0}
@@ -155,6 +153,18 @@ h3{font-size:22px;line-height:1.25}
 .prova .mestrado{margin:var(--juliano-e-3) 0 0;max-width:34em;color:var(--juliano-on-night)}
 .prova .link-seta{color:var(--juliano-on-night);text-decoration-color:var(--juliano-bronze-claro)}
 .prova .link-seta:hover{text-decoration-color:var(--juliano-on-night)}
+
+/* ---------- avaliacoes: papel 2. Tres falas de pacientes, a fonte publica no fim. Sem nota numerica ---------- */
+.avaliacoes{background:var(--juliano-paper-2);padding:var(--juliano-e-6) 0}
+.avaliacoes .wrap{display:grid;gap:var(--juliano-e-4)}
+.avaliacoes .vozes{list-style:none;margin:0;padding:0;display:grid;gap:var(--juliano-e-4)}
+.avaliacoes .voz{margin:0;padding-top:var(--juliano-e-3);border-top:1px solid var(--juliano-hair-forte)}
+.avaliacoes blockquote{margin:0}
+.avaliacoes blockquote p{margin:0;font-family:var(--juliano-display);font-size:var(--juliano-t-lede);line-height:1.5;color:var(--juliano-ink)}
+.avaliacoes .autor{margin:var(--juliano-e-2) 0 0;font-size:var(--juliano-t-legenda);color:var(--juliano-ink-2)}
+.avaliacoes .fonte{margin:0;display:flex;align-items:center;gap:var(--juliano-e-1)}
+.avaliacoes .fonte .estrela{width:20px;height:20px;flex:none;fill:var(--juliano-bronze);stroke:var(--juliano-bronze);stroke-width:1.5;stroke-linejoin:round}
+.avaliacoes .link-seta{color:var(--juliano-ink-2)}
 
 /* ---------- faq: papel, details e summary (funciona sem JavaScript) ---------- */
 .faq{background:var(--juliano-paper);padding:var(--juliano-e-6) 0 var(--juliano-e-5)}
@@ -198,8 +208,6 @@ h3{font-size:22px;line-height:1.25}
 .wafloat{display:none}
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;justify-content:center;background:var(--juliano-paper);border-top:1px solid var(--juliano-hair);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -12px 24px -18px rgba(30,36,40,.4)}
 .sticky .btn{width:min(100%,360px)}
-.sticky{transition:transform var(--juliano-dur) var(--juliano-ease)}
-.sticky.oculta{transform:translateY(110%)}
 #wa-modal .online .dot{display:none}
 
 @media (min-width:560px){
@@ -238,14 +246,21 @@ h3{font-size:22px;line-height:1.25}
   .local .foto-c::before{content:"";position:absolute;inset:16px 16px -16px -16px;border:1px solid var(--juliano-bronze);border-radius:var(--juliano-r-foto);z-index:0}
   .local .foto-c img{position:relative;z-index:1;height:420px;border-radius:var(--juliano-r-foto);box-shadow:var(--juliano-sombra-foto)}
   .local .corpo{grid-column:2;grid-row:1}
+  .avaliacoes .vozes{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--juliano-e-5)}
   .wafloat{width:60px}
 }
 @media (max-width:879px){.wafloat{display:none!important}}
+/* celular: CRM e RQE ja estao em "id" e em "rqe" logo abaixo; o cabecalho fica so com o nome e a foto sobe um pouco */
+@media (max-width:699px){
+  .topo-site .wm span{display:none}
+  .hero .wrap{grid-template-columns:140px minmax(0,1fr)}
+  .foto{width:140px}
+  .foto img{width:140px;height:175px}
+}
 @media (max-width:359px){.wm b{font-size:15px;letter-spacing:.1em}.marca img{width:38px;height:38px}.btn{padding-left:20px;padding-right:20px}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}
-  .js .reveal:not(.in){opacity:1;transform:none}
 }
 </style>
 <style>
@@ -287,7 +302,7 @@ h3{font-size:22px;line-height:1.25}
   #wa-modal .avatar .on{position:absolute;right:1px;bottom:1px;width:13px;height:13px;border-radius:50%;background:var(--wa);border:2.5px solid var(--wa-head-b);}
   #wa-modal .who{display:flex;flex-direction:column;gap:2px;min-width:0;}
   #wa-modal .nm{font-family:var(--wa-head-font);font-weight:700;font-size:1.15rem;letter-spacing:-.01em;}
-  #wa-modal .cred{font-size:.72rem;font-weight:500;color:rgba(255,255,255,.92);line-height:1.35;}
+  #wa-modal .cred{display:block;margin:0;padding:0;border:0;font-size:.72rem;font-weight:500;color:rgba(255,255,255,.92);line-height:1.35;}  /* display/margin/padding/border: a LP pode ter .cred proprio (bloco de credenciais) e ele nao pode vazar pro modal */
   #wa-modal .online{display:flex;align-items:center;gap:.45rem;padding:.55rem 1.25rem;background:var(--wa-band);font-size:.74rem;font-weight:600;color:var(--wa-head-b);}
   #wa-modal .online .dot{width:7px;height:7px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 3px rgba(37,211,102,.25);}
   #wa-modal .wbody{padding:1.2rem 1.25rem 1.4rem;}
@@ -374,6 +389,19 @@ h3{font-size:22px;line-height:1.25}
 @media (prefers-reduced-motion:reduce){#wa-modal .screen.active{animation:none}}
 /* widget:fim */
 </style>
+<style>
+/* so esconde depois que o script confirma que roda (html.rv) */
+.rv [data-rv]:not(.in){opacity:0;transform:translateY(18px)}
+.rv [data-rv]{transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv [data-rv].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv [data-rv]:not(.in){opacity:1;transform:none}.rv [data-rv]{transition:none}}
+@media print{.rv [data-rv]:not(.in){opacity:1;transform:none}}
+</style>
+<style>
+[data-sticky]{transition:transform .3s ease,visibility 0s}
+[data-sticky].sticky-off{transform:translateY(110%);visibility:hidden;transition:transform .3s ease,visibility 0s .3s}
+@media (prefers-reduced-motion:reduce){[data-sticky],[data-sticky].sticky-off{transition:none}}
+</style>
 </head>
 <body>
 <script>document.documentElement.classList.add('js');</script>
@@ -391,6 +419,7 @@ h3{font-size:22px;line-height:1.25}
     <symbol id="i-msg" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
     <symbol id="i-nav" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol>
     <symbol id="i-alerta" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
     <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
   </defs>
 </svg>
@@ -411,48 +440,48 @@ h3{font-size:22px;line-height:1.25}
 <section class="hero" data-bloco="hero">
   <div class="wrap">
     <h1>Cuido do coração e do resto junto, na mesma consulta.</h1>
-    <p class="sub">Pressão alta e check-up do adulto, vistos por inteiro, <span class="uti">por quem coordena a UTI Cardiovascular.</span></p>
+    <p class="sub">Pressão alta, exame alterado e check-up do adulto, <span class="uti">por quem coordena a UTI Cardiovascular.</span></p>
     <figure class="foto"><img src="fotos/juliano-retrato.jpg" width="560" height="700" alt="Dr. Juliano Reis, de camisa polo azul-marinho, sentado diante de uma parede cinza-bege, olhando para a câmera." fetchpriority="high"></figure>
     <div class="id">
       <p class="nome">Dr. Juliano Reis</p>
       <p class="crm">Médico, CRM-MG 63389</p>
-      <p class="cred">Mestre em Ciências Cardiovasculares.</p>
+      <p class="cred">Mestre em Ciências Cardiovasculares (FELUMA, 2025).</p>
     </div>
     <p class="rqe"><span>Cardiologia, RQE 45159</span><span>Clínica Médica, RQE 38344</span><span>Terapia Intensiva, RQE 55623</span></p>
     <div class="acoes">
-      <button class="btn" type="button" data-wa>Agendar consulta <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
+      <button class="btn" type="button" data-wa data-sticky-alvo>Agendar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
     </div>
   </div>
   <span class="ripado" aria-hidden="true"></span>
 </section>
 
 <section class="beneficios" data-bloco="beneficios" aria-label="Como funciona o atendimento">
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <ul>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg><span>Consulta de cerca de 30 minutos, com hora marcada</span></li>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-steto"/></svg><span>Três especialidades com RQE, que você confere abaixo</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg><span>Primeira consulta de cerca de 30 minutos, com hora marcada</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-steto"/></svg><span>Três RQEs: Cardiologia, Clínica Médica e Terapia Intensiva</span></li>
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>Em Varginha, terça, quarta e quinta</span></li>
     </ul>
   </div>
 </section>
 
 <section class="servicos" data-bloco="servicos">
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <div class="cab">
-      <h2>O que olho na consulta</h2>
+      <h2>Quatro motivos para marcar</h2>
       <span class="filete" role="presentation"></span>
-      <p>Pressão, exames e sintomas entram na mesma conversa. Eu olho o seu caso de ponta a ponta e explico o que faz sentido investigar.</p>
+      <p>Para cada queixa, o que acontece na consulta: o que examino, o exame que peço ou leio, e a decisão que sai dali.</p>
       <div class="fecho">
-        <p>Se um desses é o seu caso, mande uma mensagem pelo WhatsApp e veja os horários livres.</p>
-        <button class="btn" type="button" data-wa>Agendar consulta <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
+        <p>Exame alterado parado na gaveta não responde nada. Mande uma mensagem pelo WhatsApp e veja os horários livres.</p>
+        <button class="btn" type="button" data-wa>Agendar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
       </div>
     </div>
     <div class="lado">
     <ul class="itens">
-      <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><div><h3>Pressão alta ou que oscila</h3><p>Pressão alta, ou que sobe e desce. A gente olha o padrão, os exames e os remédios que você já usa, e define o próximo passo.</p></div></li>
-      <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><h3>Check-up do adulto</h3><p>Olho coração, pressão e exames juntos. Explico o que faz sentido pedir no seu caso e por quê.</p></div></li>
-      <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg><div><h3>Exame que veio alterado</h3><p>Traga o resultado. Eu explico o que ele significa no seu caso e se pede mais exames ou acompanhamento.</p></div></li>
-      <li class="item reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg><div><h3>Cansaço, palpitação ou medo do coração</h3><p>Esses sintomas têm causas diferentes, nem todas no coração. Escuto a sua história, examino e explico o que vale investigar.</p></div></li>
+      <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><div><h3>Pressão alta que não baixa ou que oscila</h3><p>Confiro as medidas, os remédios e as doses que você usa. Pressão que não cede com remédio, ou que aparece cedo, pode ter uma causa por trás: aí eu investigo antes de só aumentar a dose.</p></div></li>
+      <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><h3>Check-up do adulto</h3><p>Coração, pressão, glicose, colesterol e rins na mesma consulta. Digo quais exames pedir na sua idade e no seu histórico, e quais você pode dispensar.</p></div></li>
+      <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg><div><h3>Exame que veio alterado</h3><p>Colesterol, glicose, eletrocardiograma ou ecocardiograma fora do padrão. Leio o laudo, explico o que ele quer dizer no seu caso e decido: tratar, repetir ou investigar mais.</p></div></li>
+      <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg><div><h3>Cansaço, palpitação ou medo do coração</h3><p>Coração disparado, fôlego curto na escada, cansaço fora do normal. Nem sempre é o coração: tireoide, anemia e remédio também causam. Examino e separo uma coisa da outra.</p></div></li>
     </ul>
     <div class="urgencia" role="note">
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-alerta"/></svg>
@@ -463,20 +492,20 @@ h3{font-size:22px;line-height:1.25}
 </section>
 
 <section class="porque" data-bloco="porque">
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <div class="cab">
       <h2>O que a UTI traz para o consultório</h2>
       <span class="filete" role="presentation"></span>
     </div>
     <div class="corpo">
-      <p class="abre">Coordeno a UTI Cardiovascular. Lá, a gente olha o paciente inteiro: coração, pressão, rins, pulmão e remédios juntos. No consultório, a situação é outra e o olhar é o mesmo.</p>
-      <p>A primeira consulta dura cerca de 30 minutos, com hora marcada. Escuto a sua história, olho o seu caso como um todo e explico o que faz sentido pedir e por quê. Sem pressa.</p>
+      <p class="abre">Coordeno a UTI Cardiovascular. Lá, quem chega com problema no coração costuma ter rim, pulmão e remédio em jogo ao mesmo tempo. Não dá para tratar um sem conferir os outros. No consultório, faço a mesma conta.</p>
+      <p>Sou cardiologista, especialista em Clínica Médica e em Terapia Intensiva, com RQE nas três. Fiz mestrado em Ciências Cardiovasculares. A primeira consulta dura cerca de 30 minutos, com hora marcada.</p>
     </div>
   </div>
 </section>
 
 <section class="prova" data-bloco="prova">
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <div class="cab">
       <h2>Registros que você pode conferir</h2>
       <span class="filete" role="presentation"></span>
@@ -484,36 +513,48 @@ h3{font-size:22px;line-height:1.25}
     </div>
     <div class="corpo">
     <dl class="regs">
-      <div class="reveal"><dt>Médico, CRM-MG</dt><dd>63389</dd></div>
-      <div class="reveal"><dt>Cardiologia, RQE</dt><dd>45159</dd></div>
-      <div class="reveal"><dt>Clínica Médica, RQE</dt><dd>38344</dd></div>
-      <div class="reveal"><dt>Terapia Intensiva, RQE</dt><dd>55623</dd></div>
+      <div><dt>Médico, CRM-MG</dt><dd>63389</dd></div>
+      <div><dt>Cardiologia, RQE</dt><dd>45159</dd></div>
+      <div><dt>Clínica Médica, RQE</dt><dd>38344</dd></div>
+      <div><dt>Terapia Intensiva, RQE</dt><dd>55623</dd></div>
     </dl>
-    <p class="mestrado">Mestre em Ciências Cardiovasculares, FELUMA, 2023 a 2025. Artigos publicados em revistas científicas, como a Scientific Reports (Nature Portfolio).</p>
+    <p class="mestrado">Mestre em Ciências Cardiovasculares pela FELUMA, 2023 a 2025. Artigos publicados em revistas científicas, como a Scientific Reports (Nature Portfolio).</p>
     <p class="links"><a class="link-seta" href="https://portal.cfm.org.br/busca-medicos/" target="_blank" rel="noopener">Conferir no portal do CFM <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
     <p class="links"><a class="link-seta" href="https://lattes.cnpq.br/9483119161975354" target="_blank" rel="noopener">Ver o currículo Lattes, atualizado em abril de 2026 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
     </div>
   </div>
 </section>
 
+<section class="avaliacoes" data-bloco="avaliacoes" aria-labelledby="avaliacoes-t">
+  <div class="wrap" data-rv>
+    <h2 id="avaliacoes-t">O que pacientes escreveram no Google</h2>
+    <ul class="vozes">
+      <li class="voz"><blockquote><p>"Sou paciente do Doutor Juliano a mais de 3 anos. [...] eu tive um diagnóstico não tão comum de pressão alta secundária. Tive todo suporte, averiguamos, fizemos tratamento e hoje vivo minha vida normal com a pressão estável."</p></blockquote><p class="autor">Talita B.</p></li>
+      <li class="voz"><blockquote><p>"Pontualidade no atendimento e segurança em seu diagnóstico."</p></blockquote><p class="autor">Marco S.</p></li>
+      <li class="voz"><blockquote><p>"Muita atenção e cuidado com paciente. Agradeço."</p></blockquote><p class="autor">Raquel F.</p></li>
+    </ul>
+    <p class="fonte"><svg class="ico estrela" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><a class="link-seta" href="https://maps.google.com/?cid=4718023751414163410" target="_blank" rel="noopener">Avaliações públicas no Google <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
+  </div>
+</section>
+
 <section class="faq" data-bloco="faq">
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <h2>Perguntas frequentes</h2>
     <span class="filete" role="presentation"></span>
     <div class="lista">
-      <details open><summary>Preciso ter algum sintoma para marcar?</summary><p>Não. Pressão alta pode ser silenciosa: você pode ter e não sentir nada. O check-up serve para olhar com calma, sem precisar de queixa.</p></details>
-      <details><summary>O que entra no check-up do adulto?</summary><p>Depende da sua idade, do seu histórico e dos seus exames. Isso eu só digo olhando o seu caso. Na consulta, explico o que faz sentido pedir e por quê.</p></details>
-      <details><summary>Quanto dura a consulta?</summary><p>A primeira consulta dura cerca de 30 minutos, com hora marcada. O retorno é mais curto. Esse tempo é para ouvir a sua história e olhar o seu caso.</p></details>
-      <details><summary>Preciso levar exames?</summary><p>Leve os exames e as receitas recentes, se tiver. Eles ajudam a olhar o caso. Se não tiver nenhum, tudo bem: a consulta começa pela sua história.</p></details>
-      <details><summary>Quais dias o Dr. Juliano atende?</summary><p>Terça, quarta e quinta, no consultório em Varginha. Os horários livres você vê pelo WhatsApp.</p></details>
-      <details><summary>Posso falar de vida sexual na consulta?</summary><p>Pode, como qualquer outro assunto. Falar disso ajuda a olhar o seu caso. Se preferir, é só dizer na consulta que quer conversar sobre isso.</p></details>
-      <details><summary>Uso anabolizante ou suplemento. Posso falar disso na consulta?</summary><p>Pode. Contar o que você usa muda o jeito como olho o coração e a pressão. É uma conversa de consulta, sem julgamento e sem sermão: eu ouço, olho o seu caso e explico o que faz sentido.</p></details>
+      <details open><summary>Preciso ter algum sintoma para marcar?</summary><p>Não. Pressão alta pode ser silenciosa: você pode ter e não sentir nada. Medir e conferir os exames é o que mostra.</p></details>
+      <details><summary>O que entra no check-up do adulto?</summary><p>Depende da sua idade, do seu histórico e dos exames que você já tem. Na consulta, digo o que pedir e por quê. O que você já fez entra na conta.</p></details>
+      <details><summary>Quanto dura a consulta?</summary><p>A primeira consulta dura cerca de 30 minutos, com hora marcada. O retorno, cerca de 10 minutos.</p></details>
+      <details><summary>Preciso levar exames?</summary><p>Leve os exames e as receitas dos remédios que você usa, se tiver. Se não tiver nenhum, a consulta começa pela sua história e eu peço o que faltar.</p></details>
+      <details><summary>Quais dias o Dr. Juliano atende?</summary><p>Terça e quarta, de manhã e à tarde. Quinta, a partir das 10h30. Feriados, não. Os horários livres você vê pelo WhatsApp.</p></details>
+      <details><summary>Posso falar de vida sexual na consulta?</summary><p>Pode, como qualquer outro assunto. Alguns remédios mexem nisso, e contar ajuda a decidir o tratamento. Se preferir, é só dizer na consulta que quer conversar sobre isso.</p></details>
+      <details><summary>Uso anabolizante ou suplemento. Posso falar disso na consulta?</summary><p>Pode. O que você usa muda a leitura da pressão, dos exames e do coração. Conversa de consulta, sem julgamento e sem sermão.</p></details>
     </div>
   </div>
 </section>
 
 <section class="local" data-bloco="local">
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <figure class="foto-c"><img src="fotos/consultorio.jpg" width="1279" height="959" alt="Dr. Juliano Reis, de jaleco branco, sentado à mesa de mármore no consultório, com painel ripado e estantes ao fundo e a placa com o nome na parede." loading="lazy" decoding="async"></figure>
     <div class="corpo">
       <div class="cab">
@@ -523,9 +564,9 @@ h3{font-size:22px;line-height:1.25}
       </div>
       <dl>
         <div class="linha-l"><dt>Endereço</dt><dd>R. Dr. Arnaldo, 135, sala 12, Vila Pinto, Varginha, MG. CEP 37014-030.</dd></div>
-        <div class="linha-l"><dt>Dias</dt><dd>Terça, quarta e quinta.</dd></div>
-        <div class="linha-l"><dt>Consulta</dt><dd>Cerca de 30 minutos na primeira, com hora marcada.</dd></div>
-        <div class="linha-l"><dt>Como marcar</dt><dd>Pelo WhatsApp, no botão Agendar consulta.</dd></div>
+        <div class="linha-l"><dt>Dias</dt><dd>Terça e quarta, de manhã e à tarde. Quinta, a partir das 10h30.</dd></div>
+        <div class="linha-l"><dt>Consulta</dt><dd>Cerca de 30 minutos na primeira, com hora marcada. Retorno de cerca de 10.</dd></div>
+        <div class="linha-l"><dt>Como marcar</dt><dd>Pelo WhatsApp, no botão Agendar pelo WhatsApp.</dd></div>
       </dl>
       <p><a class="link-seta" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Dr.+Arnaldo,+135,+Vila+Pinto,+Varginha,+MG" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nav"/></svg>Como chegar</a></p>
     </div>
@@ -533,11 +574,11 @@ h3{font-size:22px;line-height:1.25}
 </section>
 
 <section class="cta-final" data-bloco="cta-final">
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <img src="assets/simbolo-escuro.svg" width="64" height="64" alt="" loading="lazy" decoding="async">
     <h2>Marque a sua consulta em Varginha</h2>
-    <p>Mande uma mensagem pelo WhatsApp, veja os horários livres de terça, quarta e quinta e escolha o que encaixa na sua rotina.</p>
-    <button class="btn claro" type="button" data-wa>Agendar consulta <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
+    <p>Mande uma mensagem pelo WhatsApp, veja os horários livres de terça, quarta e quinta e escolha o seu. A primeira consulta dura cerca de 30 minutos.</p>
+    <button class="btn claro" type="button" data-wa>Agendar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
   </div>
 </section>
 
@@ -559,9 +600,9 @@ h3{font-size:22px;line-height:1.25}
 <!-- float (desktop): fixo na tela em toda a rolagem. Nao e bloco, e elemento permanente. O canonico vem junto do widget, abaixo. -->
 
 <!-- sticky (mobile): o caminho pro WhatsApp acompanha a rolagem inteira -->
-<div class="sticky" data-bloco="cta-flutuante">
-  <button class="btn" type="button" data-wa>Agendar consulta <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
-  <noscript><a class="btn" href="https://wa.me/5535988334600?text=Ol%C3%A1%2C%20Dr.%20Juliano!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20consulta.">Agendar consulta</a></noscript>
+<div class="sticky" data-bloco="cta-flutuante" data-sticky>
+  <button class="btn" type="button" data-wa>Agendar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
+  <noscript><a class="btn" href="https://wa.me/5535988334600?text=Ol%C3%A1%2C%20Dr.%20Juliano!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20consulta.">Agendar pelo WhatsApp</a></noscript>
 </div>
 
 <script>
@@ -690,22 +731,22 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
 </script>
 
 <script>
-/* barra fixa do celular: some enquanto o botao do hero esta na tela (um botao por dobra) */
 (function(){
-  var b=document.querySelector('.hero .acoes .btn'), st=document.querySelector('.sticky');
-  if(!b||!st||!('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function(es){ st.classList.toggle('oculta', es[0].isIntersecting); }, {threshold:1}).observe(b);
+  var els = document.querySelectorAll('[data-rv]');
+  if(!els.length || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var h = document.documentElement;
+  h.classList.add('rv');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+  /* impressao: mostra tudo */
+  window.addEventListener('beforeprint', function(){ els.forEach(function(e){ e.classList.add('in'); }); });
 })();
 </script>
 <script>
-/* .reveal: o script so esconde depois de confirmar que roda e que ha IntersectionObserver */
 (function(){
-  var els = document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    document.documentElement.classList.remove('js'); return;
-  }
-  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
-  els.forEach(function(e){ io.observe(e); });
+  var s=document.querySelector('[data-sticky]'), b=document.querySelector('[data-sticky-alvo]');
+  if(!s||!b||!('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(e){ s.classList.toggle('sticky-off', e[0].isIntersecting); }, {threshold:.6}).observe(b);
 })();
 </script>
 </body>
