@@ -98,7 +98,6 @@ h3{font-size:22px;line-height:1.25}
 .chips .ico{width:18px;height:18px;flex:none;color:var(--juliano-bronze)}
 .hero h1{grid-area:h1}
 .sub{grid-area:sub;margin:0;max-width:34em;font-family:var(--juliano-display);font-weight:400;font-size:var(--juliano-t-lede);line-height:1.4;color:var(--juliano-ink)}
-.sub .uti{color:var(--juliano-accent);font-weight:500}
 .foto{grid-area:foto;position:relative;margin:0}
 .foto img{display:block;width:100%;height:260px;object-fit:cover;object-position:50% 30%;border-radius:var(--juliano-r-foto);box-shadow:var(--juliano-sombra-foto);background:var(--juliano-greige)}
 .acoes{grid-area:acoes;display:grid;gap:var(--juliano-e-2);justify-items:start}
@@ -264,6 +263,20 @@ h3{font-size:22px;line-height:1.25}
 .rodape .ripado{background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'><path d='M0 15H30l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H150l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H270l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H390l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H510l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H630l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H750l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H870l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H990l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H1110l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H1200' fill='none' stroke='%237D5C39' stroke-width='1.6' stroke-linejoin='round' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>") left center/1200px 34px repeat-x}
 @media (prefers-reduced-motion:reduce){.js .ripado{animation:none}}
 @media (min-width:880px){.foto::before{border:0;border-radius:0;inset:auto -16px -22px 16px;height:24px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24' preserveAspectRatio='none'><path d='M0 15H34l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H120' fill='none' stroke='%237D5C39' stroke-width='2' stroke-linejoin='round' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>") left/120px 24px repeat-x}}
+/* topo em tela cheia no celular, como a ML (Felipe, 16/11/2026): imagem sem rosto do consultorio de cardiologia
+   (gerada, opcao C de topo/) ate o Juliano mandar fotos boas; o texto fica por cima, num degrade escuro */
+@media (max-width:879px){
+.hero{padding:0;background:#141a1f;overflow:hidden}
+.hero .wrap{position:relative;min-height:calc(100svh - 150px);padding-top:0;padding-bottom:24px;grid-template-areas:"." "reg" "chips" "h1" "sub" "acoes";grid-template-rows:1fr auto auto auto auto auto;row-gap:10px}
+.hero .wrap::before{content:"";position:absolute;inset:0 -16px;background:linear-gradient(180deg,rgba(20,26,31,0) 25%,rgba(20,26,31,.82) 50%,rgba(20,26,31,.97) 100%),url(fotos/hero-mesa.jpg) 60% 40%/cover no-repeat;z-index:0}
+.hero .wrap>*{position:relative;z-index:1}
+.hero .foto{display:none}
+.hero .legal,.hero .sub{color:#E9E4DC}
+.hero h1{color:#fff}
+.hero .chips li{color:#F1D9B8}
+.hero .chips .ico{color:#E2B98A}
+.hero .ripado{display:none}
+}
 </style>
 <style>
 /* widget:inicio */
@@ -431,8 +444,8 @@ h3{font-size:22px;line-height:1.25}
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg>Mestre em Ciências Cardiovasculares</li>
     </ul>
     <h1>Cuido do coração e do resto junto, na mesma consulta.</h1>
-    <p class="sub">Pressão alta, exame alterado e check-up do adulto, <span class="uti">por quem coordena a UTI Cardiovascular.</span></p>
-    <figure class="foto"><img src="fotos/juliano-retrato.jpg" width="560" height="700" alt="Dr. Juliano Reis, de camisa polo azul-marinho, sentado diante de uma parede cinza-bege, olhando para a câmera." fetchpriority="high"></figure>
+    <p class="sub">Pressão alta, exame alterado e check-up do adulto.</p>
+    <figure class="foto"><img src="fotos/hero-mesa.jpg" width="900" height="1612" alt="Mesa de consultório de cardiologia com estetoscópio, aparelho de pressão e o traçado de um eletrocardiograma." fetchpriority="high"></figure>
     <div class="acoes">
       <button class="btn" type="button" data-wa data-sticky-alvo>Agendar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
       <p class="micro leg"><span class="hero-micro">Agende pelo WhatsApp em qualquer horário.</span></p>
