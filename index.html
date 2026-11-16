@@ -91,19 +91,16 @@ h3{font-size:22px;line-height:1.25}
 
 /* ---------- hero: o eixo, o nome, uma linha de prova, um botao, o apoio ---------- */
 .hero{position:relative;padding:var(--juliano-e-4) 0 0;background:var(--juliano-paper)}
-.hero .wrap{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"h1 h1" "sub sub" "foto id" "rqe rqe" "acoes acoes";column-gap:var(--juliano-e-3);row-gap:var(--juliano-e-3);align-items:start}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"reg" "chips" "h1" "sub" "acoes" "foto";row-gap:var(--juliano-e-2);align-items:start}
+.hero .legal{grid-area:reg;margin:0;font-size:var(--juliano-t-rotulo);line-height:1.4;letter-spacing:-.01em;color:var(--juliano-ink-2)}
+.chips{grid-area:chips;list-style:none;margin:0 0 var(--juliano-e-1);padding:0;display:flex;flex-wrap:wrap;gap:var(--juliano-e-1) var(--juliano-e-3)}
+.chips li{display:inline-flex;align-items:center;gap:8px;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:15px;line-height:1.25;text-transform:uppercase;letter-spacing:.08em;color:var(--juliano-accent)}
+.chips .ico{width:18px;height:18px;flex:none;color:var(--juliano-bronze)}
 .hero h1{grid-area:h1}
 .sub{grid-area:sub;margin:0;max-width:34em;font-family:var(--juliano-display);font-weight:400;font-size:var(--juliano-t-lede);line-height:1.4;color:var(--juliano-ink)}
 .sub .uti{color:var(--juliano-accent);font-weight:500}
-.foto{grid-area:foto;position:relative;margin:0;width:116px}
-.foto img{display:block;width:116px;height:145px;object-fit:cover;object-position:50% 50%;border-radius:var(--juliano-r-foto);box-shadow:var(--juliano-sombra-foto);background:var(--juliano-greige)}
-.id{grid-area:id;min-width:0}
-.id p{margin:0}
-.id .nome{font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:19px;line-height:1.25;color:var(--juliano-ink)}
-.id .crm{margin-top:4px;font-size:var(--juliano-t-legenda);line-height:1.4;color:var(--juliano-ink)}
-.rqe{grid-area:rqe;margin:0;font-size:var(--juliano-t-legenda);line-height:1.5;color:var(--juliano-ink-2)}
-.rqe span{display:block;white-space:nowrap}
-.id .cred{margin-top:10px;font-size:var(--juliano-t-legenda);line-height:1.4;font-weight:500;color:var(--juliano-ink)}
+.foto{grid-area:foto;position:relative;margin:0}
+.foto img{display:block;width:100%;height:260px;object-fit:cover;object-position:50% 30%;border-radius:var(--juliano-r-foto);box-shadow:var(--juliano-sombra-foto);background:var(--juliano-greige)}
 .acoes{grid-area:acoes;display:grid;gap:var(--juliano-e-2);justify-items:start}
 .acoes .btn{width:100%}
 .acoes .micro{margin:0}
@@ -159,7 +156,7 @@ h3{font-size:22px;line-height:1.25}
 .prova .link-seta:hover{text-decoration-color:var(--juliano-on-night)}
 
 /* ---------- avaliacoes: papel 2. Tres falas de pacientes, a fonte publica no fim. Sem nota numerica ---------- */
-.avaliacoes{background:var(--juliano-paper-2);padding:var(--juliano-e-6) 0}
+.avaliacoes{background:var(--juliano-paper-2);padding:var(--juliano-e-5) 0}
 .avaliacoes .wrap{display:grid;gap:var(--juliano-e-4)}
 .avaliacoes .vozes{list-style:none;margin:0;padding:0;display:grid;gap:var(--juliano-e-4)}
 .avaliacoes .voz{margin:0;padding-top:var(--juliano-e-3);border-top:1px solid var(--juliano-hair-forte)}
@@ -228,14 +225,11 @@ h3{font-size:22px;line-height:1.25}
   .marca img{width:50px;height:50px}
   .wm b{font-size:18px}
   .hero{padding-top:var(--juliano-e-6)}
-  .hero .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);grid-template-areas:"h1 foto" "sub foto" "id foto" "rqe foto" "acoes foto";column-gap:var(--juliano-e-6);row-gap:var(--juliano-e-3);align-items:start}
+  .hero .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);grid-template-areas:"reg foto" "chips foto" "h1 foto" "sub foto" "acoes foto" ". foto";grid-template-rows:auto auto auto auto auto 1fr;column-gap:var(--juliano-e-6);row-gap:var(--juliano-e-3);align-items:start}
+  .hero .legal{font-size:var(--juliano-t-legenda)}
   .foto{width:100%;max-width:380px;justify-self:end;margin-right:var(--juliano-e-3)}
   .foto::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--juliano-bronze);border-radius:var(--juliano-r-foto);z-index:0}
   .foto img{position:relative;z-index:1;width:100%;height:auto;aspect-ratio:4/5;object-position:50% 50%}
-  .id .nome{font-size:24px}
-  .id .crm{font-size:18px}
-  .rqe{font-size:18px}
-  .id .cred{font-size:20px}
   .ripado{height:56px;margin-top:var(--juliano-e-6)}
   .beneficios ul{grid-template-columns:repeat(3,minmax(0,1fr))}
   .beneficios li{border-top:0;border-left:1px solid rgba(245,242,236,.16);padding:var(--juliano-e-4) var(--juliano-e-4)}
@@ -254,18 +248,22 @@ h3{font-size:22px;line-height:1.25}
   .wafloat{width:60px}
 }
 @media (max-width:879px){.wafloat{display:none!important}}
-/* celular: CRM e RQE ja estao em "id" e em "rqe" logo abaixo; o cabecalho fica so com o nome e a foto sobe um pouco */
-@media (max-width:699px){
-  .topo-site .wm span{display:none}
-  .hero .wrap{grid-template-columns:140px minmax(0,1fr)}
-  .foto{width:140px}
-  .foto img{width:140px;height:175px}
-}
 @media (max-width:359px){.wm b{font-size:15px;letter-spacing:.1em}.marca img{width:38px;height:38px}.btn{padding-left:20px;padding-right:20px}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}
 }
+/* ---------- grafismo proprio: o tracado do eletro e o papel milimetrado (Felipe, 15/11/2026; direcao "A + papel" de v2/direcoes/).
+   O batimento substitui o filete curto que ML e Isabella tambem usam; o papel entra so no topo e nas perguntas, com parcimonia ---------- */
+.filete{width:120px;height:24px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24' preserveAspectRatio='none'><path d='M0 15H34l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H120' fill='none' stroke='%237D5C39' stroke-width='2' stroke-linejoin='round' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>") left center/120px 24px no-repeat}
+.prova .filete{background:transparent left center/120px 24px no-repeat;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24' preserveAspectRatio='none'><path d='M0 15H34l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H120' fill='none' stroke='%23C9A27A' stroke-width='2' stroke-linejoin='round' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>")}
+.hero,.faq{background:linear-gradient(rgba(125,92,57,.07) 1px,transparent 1px) 0 0/25px 25px,linear-gradient(90deg,rgba(125,92,57,.07) 1px,transparent 1px) 0 0/25px 25px,linear-gradient(rgba(125,92,57,.03) 1px,transparent 1px) 0 0/5px 5px,linear-gradient(90deg,rgba(125,92,57,.03) 1px,transparent 1px) 0 0/5px 5px,var(--juliano-paper)}
+.ripado{height:56px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'><path d='M0 15H30l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H150l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H270l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H390l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H510l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H630l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H750l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H870l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H990l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H1110l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H1200' fill='none' stroke='%237D5C39' stroke-width='1.6' stroke-linejoin='round' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>") left center/1200px 34px repeat-x,linear-gradient(rgba(125,92,57,.07) 1px,transparent 1px) 0 0/25px 25px,linear-gradient(90deg,rgba(125,92,57,.07) 1px,transparent 1px) 0 0/25px 25px,linear-gradient(rgba(125,92,57,.03) 1px,transparent 1px) 0 0/5px 5px,linear-gradient(90deg,rgba(125,92,57,.03) 1px,transparent 1px) 0 0/5px 5px,var(--juliano-paper);border-top:0;border-bottom:1px solid rgba(125,92,57,.25)}
+.js .ripado{animation:traco 2.4s .3s cubic-bezier(.65,0,.35,1) both}
+@keyframes traco{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.rodape .ripado{background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'><path d='M0 15H30l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H150l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H270l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H390l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H510l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H630l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H750l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H870l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H990l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H1110l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H1200' fill='none' stroke='%237D5C39' stroke-width='1.6' stroke-linejoin='round' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>") left center/1200px 34px repeat-x}
+@media (prefers-reduced-motion:reduce){.js .ripado{animation:none}}
+@media (min-width:880px){.foto::before{border:0;border-radius:0;inset:auto -16px -22px 16px;height:24px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24' preserveAspectRatio='none'><path d='M0 15H34l4-3 4 3h8l3 4 5-17 5 21 3-8h10q7-8 14 0H120' fill='none' stroke='%237D5C39' stroke-width='2' stroke-linejoin='round' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>") left/120px 24px repeat-x}}
 </style>
 <style>
 /* widget:inicio */
@@ -415,9 +413,9 @@ h3{font-size:22px;line-height:1.25}
 
 <header class="topo-site" data-bloco="header">
   <div class="wrap">
-    <a class="marca" href="#conteudo" aria-label="Dr. Juliano Reis, Médico, CRM-MG 63389 · Cardiologia, RQE 45159">
+    <a class="marca" href="#conteudo" aria-label="Dr. Juliano Reis, Cardiologista em Varginha, MG">
       <img src="assets/simbolo-claro.svg" width="50" height="50" alt="" decoding="async">
-      <span class="wm"><b>Dr. Juliano Reis</b><span>Médico, CRM-MG 63389 · Cardiologia, RQE 45159</span></span>
+      <span class="wm"><b>Dr. Juliano Reis</b><span>Cardiologista em Varginha, MG</span></span>
     </a>
     <button class="btn" type="button" data-wa>Agendar</button>
   </div>
@@ -427,15 +425,14 @@ h3{font-size:22px;line-height:1.25}
 
 <section class="hero" data-bloco="hero">
   <div class="wrap">
+    <p class="legal">Médico, CRM-MG 63389 · Cardiologia, RQE 45159</p>
+    <ul class="chips" aria-label="Credenciais">
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg>Coordena a UTI Cardiovascular</li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg>Mestre em Ciências Cardiovasculares</li>
+    </ul>
     <h1>Cuido do coração e do resto junto, na mesma consulta.</h1>
     <p class="sub">Pressão alta, exame alterado e check-up do adulto, <span class="uti">por quem coordena a UTI Cardiovascular.</span></p>
     <figure class="foto"><img src="fotos/juliano-retrato.jpg" width="560" height="700" alt="Dr. Juliano Reis, de camisa polo azul-marinho, sentado diante de uma parede cinza-bege, olhando para a câmera." fetchpriority="high"></figure>
-    <div class="id">
-      <p class="nome">Dr. Juliano Reis</p>
-      <p class="crm">Médico, CRM-MG 63389</p>
-      <p class="cred">Mestre em Ciências Cardiovasculares (FELUMA, 2025).</p>
-    </div>
-    <p class="rqe"><span>Cardiologia, RQE 45159</span><span>Clínica Médica, RQE 38344</span><span>Terapia Intensiva, RQE 55623</span></p>
     <div class="acoes">
       <button class="btn" type="button" data-wa data-sticky-alvo>Agendar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
       <p class="micro leg"><span class="hero-micro">Agende pelo WhatsApp em qualquer horário.</span></p>
@@ -449,7 +446,7 @@ h3{font-size:22px;line-height:1.25}
     <ul>
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg><span>Primeira consulta de cerca de 30 minutos, com hora marcada</span></li>
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-steto"/></svg><span>Três RQEs: Cardiologia, Clínica Médica e Terapia Intensiva</span></li>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>Em Varginha, terça, quarta e quinta</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><span>Eletrocardiograma feito ali mesmo, no consultório</span></li>
     </ul>
   </div>
 </section>
@@ -477,6 +474,18 @@ h3{font-size:22px;line-height:1.25}
       <div><h3>Quando não esperar a consulta</h3><p>Dor forte no peito, falta de ar, desmaio ou fraqueza de um lado do corpo: procure o pronto-atendimento ou ligue 192.</p></div>
     </div>
     </div>
+  </div>
+</section>
+
+<section class="avaliacoes" data-bloco="avaliacoes" aria-labelledby="avaliacoes-t">
+  <div class="wrap" data-rv>
+    <h2 id="avaliacoes-t">No Google, pacientes escreveram sobre pontualidade, atenção e pressão estável</h2>
+    <ul class="vozes">
+      <li class="voz"><blockquote><p>"Sou paciente do Doutor Juliano a mais de 3 anos. [...] eu tive um diagnóstico não tão comum de pressão alta secundária. Tive todo suporte, averiguamos, fizemos tratamento e hoje vivo minha vida normal com a pressão estável."</p></blockquote><p class="autor">Talita B., junho de 2026</p></li>
+      <li class="voz"><blockquote><p>"Pontualidade no atendimento e segurança em seu diagnóstico."</p></blockquote><p class="autor">Marco S., fevereiro de 2026</p></li>
+      <li class="voz"><blockquote><p>"Muita atenção e cuidado com paciente. Agradeço."</p></blockquote><p class="autor">Raquel F., maio de 2025</p></li>
+    </ul>
+    <p class="fonte"><svg class="ico estrela" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><a class="link-seta" href="https://maps.google.com/?cid=4718023751414163410" target="_blank" rel="noopener">Avaliações públicas no Google, com o texto como cada paciente escreveu <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
   </div>
 </section>
 
@@ -511,18 +520,6 @@ h3{font-size:22px;line-height:1.25}
     <p class="links"><a class="link-seta" href="https://portal.cfm.org.br/busca-medicos/" target="_blank" rel="noopener">Conferir no portal do CFM <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
     <p class="links"><a class="link-seta" href="https://lattes.cnpq.br/9483119161975354" target="_blank" rel="noopener">Ver o currículo Lattes, atualizado em abril de 2026 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
     </div>
-  </div>
-</section>
-
-<section class="avaliacoes" data-bloco="avaliacoes" aria-labelledby="avaliacoes-t">
-  <div class="wrap" data-rv>
-    <h2 id="avaliacoes-t">O que pacientes escreveram no Google</h2>
-    <ul class="vozes">
-      <li class="voz"><blockquote><p>"Sou paciente do Doutor Juliano a mais de 3 anos. [...] eu tive um diagnóstico não tão comum de pressão alta secundária. Tive todo suporte, averiguamos, fizemos tratamento e hoje vivo minha vida normal com a pressão estável."</p></blockquote><p class="autor">Talita B.</p></li>
-      <li class="voz"><blockquote><p>"Pontualidade no atendimento e segurança em seu diagnóstico."</p></blockquote><p class="autor">Marco S.</p></li>
-      <li class="voz"><blockquote><p>"Muita atenção e cuidado com paciente. Agradeço."</p></blockquote><p class="autor">Raquel F.</p></li>
-    </ul>
-    <p class="fonte"><svg class="ico estrela" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><a class="link-seta" href="https://maps.google.com/?cid=4718023751414163410" target="_blank" rel="noopener">Avaliações públicas no Google <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
   </div>
 </section>
 
@@ -578,7 +575,7 @@ h3{font-size:22px;line-height:1.25}
   <div class="wrap">
     <a class="marca" href="#conteudo" aria-label="Dr. Juliano Reis">
       <img src="assets/simbolo-claro.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
-      <span class="wm"><b>Dr. Juliano Reis</b><span>Médico, CRM-MG 63389</span></span>
+      <span class="wm"><b>Dr. Juliano Reis</b><span>Médico, CRM-MG 63389 · Cardiologia, RQE 45159</span></span>
     </a>
     <p class="esp leg">Cardiologia (RQE 45159), Clínica Médica (RQE 38344) e Terapia Intensiva (RQE 55623)</p>
     <p class="end leg">R. Dr. Arnaldo, 135, sala 12, Vila Pinto, Varginha, MG. CEP 37014-030.</p>
