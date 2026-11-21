@@ -12,7 +12,7 @@ Função: site do Dr. Juliano Reis (cardiologista e clínica médica, CRM-MG 633
 Data: 2026-11-09. Marca: external/doctors/juliano/wiki/concepts/marca-juliano (tokens.css copiado para assets/tokens.css, copia de deploy). Ícones: Lucide v0.475.0 (licença ISC), em sprite no começo do body.
 Preview noindex em fcamara1109/juliano-lp. Premissas, desvios e pendências: README.md desta pasta.
 -->
-<meta name="description" content="Dr. Juliano Reis, médico (CRM-MG 63389) e cardiologista (RQE 45159) em Varginha, MG. Coordena a UTI Cardiovascular. Consulta de cerca de 30 minutos, com hora marcada.">
+<meta name="description" content="Dr. Juliano Reis, médico (CRM-MG 63389) e cardiologista (RQE 45159) em Varginha, MG. Coordena a UTI Cardiovascular. Pressão alta, exame alterado e check-up do adulto, com um médico só.">
 <meta name="theme-color" content="#F5F2EC">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -61,7 +61,7 @@ button{font:inherit;color:inherit}
 
 /* ---------- tipos ---------- */
 h1,h2,h3{margin:0;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);line-height:var(--juliano-lh-titulo);letter-spacing:var(--juliano-track-titulo);text-wrap:balance}
-h1{font-size:clamp(32px,1.6rem + 2.4vw,56px)}
+.hero-titulo{font-size:clamp(32px,1.6rem + 2.4vw,56px)}
 h2{font-size:clamp(26px,1.4rem + 1.2vw,38px)}
 h3{font-size:22px;line-height:1.25}
 .filete{display:block;width:44px;height:2px;margin:var(--juliano-e-3) 0 var(--juliano-e-3);background:var(--juliano-bronze,#7D5C39)}
@@ -86,7 +86,8 @@ h3{font-size:22px;line-height:1.25}
 .marca img{width:44px;height:44px;flex:none}
 .wm{display:block;min-width:0}
 .wm b{display:block;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:17px;line-height:1.1;letter-spacing:var(--juliano-track-nome);text-transform:uppercase;white-space:nowrap}
-.wm span{display:block;margin-top:5px;font-size:var(--juliano-t-legenda);line-height:1.25;color:var(--juliano-ink-2)}
+.wm span,.wm h1{display:block;margin-top:5px;font-size:var(--juliano-t-legenda);line-height:1.25;color:var(--juliano-ink-2)}
+.wm h1{font-family:inherit;font-weight:inherit;letter-spacing:inherit;text-wrap:inherit}  /* o h1 do header (Profissão · Cidade) tem a cara da linha que era span */
 .topo-site .btn{display:none;min-height:var(--juliano-toque);padding:9px 22px}
 
 /* ---------- hero: o eixo, o nome, uma linha de prova, um botao, o apoio ---------- */
@@ -96,7 +97,7 @@ h3{font-size:22px;line-height:1.25}
 .chips{grid-area:chips;list-style:none;margin:0 0 var(--juliano-e-1);padding:0;display:flex;flex-wrap:wrap;gap:var(--juliano-e-1) var(--juliano-e-3)}
 .chips li{display:inline-flex;align-items:center;gap:8px;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:15px;line-height:1.25;text-transform:uppercase;letter-spacing:.08em;color:var(--juliano-accent)}
 .chips .ico{width:18px;height:18px;flex:none;color:var(--juliano-bronze)}
-.hero h1{grid-area:h1}
+.hero .hero-titulo{grid-area:h1}
 .sub{grid-area:sub;margin:0;max-width:34em;font-family:var(--juliano-display);font-weight:400;font-size:var(--juliano-t-lede);line-height:1.4;color:var(--juliano-ink)}
 .foto{grid-area:foto;position:relative;margin:0}
 .foto img{display:block;width:100%;height:260px;object-fit:cover;object-position:50% 30%;border-radius:var(--juliano-r-foto);box-shadow:var(--juliano-sombra-foto);background:var(--juliano-greige)}
@@ -125,10 +126,6 @@ h3{font-size:22px;line-height:1.25}
 .item .ico{width:34px;height:34px;margin-top:2px;color:var(--juliano-accent)}
 .item h3{margin:0 0 6px}
 .item p{margin:0;color:var(--juliano-ink-2)}
-.urgencia{margin-top:var(--juliano-e-4);display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:var(--juliano-e-2);padding:var(--juliano-e-3);background:var(--juliano-surface);border:1px solid var(--juliano-hair-forte);border-left:3px solid var(--juliano-bronze);border-radius:var(--juliano-r-campo)}
-.urgencia .ico{margin-top:2px;color:var(--juliano-bronze)}
-.urgencia h3{margin:0 0 6px}
-.urgencia p{margin:0;color:var(--juliano-ink)}
 
 /* ---------- porque: papel. O titulo de um lado, a voz dele do outro ---------- */
 .porque{background:var(--juliano-paper);padding:var(--juliano-e-6) 0}
@@ -272,7 +269,7 @@ h3{font-size:22px;line-height:1.25}
 .hero .wrap>*{position:relative;z-index:1}
 .hero .foto{display:none}
 .hero .legal,.hero .sub{color:#E9E4DC}
-.hero h1{color:#fff}
+.hero .hero-titulo{color:#fff}
 .hero .chips li{color:#F1D9B8}
 .hero .chips .ico{color:#E2B98A}
 .hero .ripado{display:none}
@@ -417,7 +414,6 @@ h3{font-size:22px;line-height:1.25}
     <symbol id="i-cal" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></symbol>
     <symbol id="i-msg" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
     <symbol id="i-nav" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol>
-    <symbol id="i-alerta" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
     <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
   </defs>
@@ -426,9 +422,9 @@ h3{font-size:22px;line-height:1.25}
 
 <header class="topo-site" data-bloco="header">
   <div class="wrap">
-    <a class="marca" href="#conteudo" aria-label="Dr. Juliano Reis, Cardiologista em Varginha, MG">
+    <a class="marca" href="#conteudo" aria-label="Dr. Juliano Reis, Cardiologista · Varginha, MG">
       <img src="assets/simbolo-claro.svg" width="50" height="50" alt="" decoding="async">
-      <span class="wm"><b>Dr. Juliano Reis</b><span>Cardiologista em Varginha, MG</span></span>
+      <span class="wm"><b>Dr. Juliano Reis</b><h1>Cardiologista · Varginha, MG</h1></span>
     </a>
     <button class="btn" type="button" data-wa>Agendar</button>
   </div>
@@ -443,8 +439,8 @@ h3{font-size:22px;line-height:1.25}
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg>Coordena a UTI Cardiovascular</li>
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg>Mestre em Ciências Cardiovasculares</li>
     </ul>
-    <h1>Cuido do coração e do resto junto, na mesma consulta.</h1>
-    <p class="sub">Pressão alta, exame alterado e check-up do adulto.</p>
+    <h2 class="hero-titulo">Cuido do coração e do resto junto, na mesma consulta.</h2>
+    <p class="sub">Pressão alta, exame alterado e check-up do adulto, com um médico só.</p>
     <figure class="foto"><img src="fotos/hero-mesa.jpg" width="900" height="1612" alt="Mesa de consultório de cardiologia com estetoscópio, aparelho de pressão e o traçado de um eletrocardiograma." fetchpriority="high"></figure>
     <div class="acoes">
       <button class="btn" type="button" data-wa data-sticky-alvo>Agendar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
@@ -457,9 +453,9 @@ h3{font-size:22px;line-height:1.25}
 <section class="beneficios" data-bloco="beneficios" aria-label="Como funciona o atendimento">
   <div class="wrap" data-rv>
     <ul>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg><span>Primeira consulta de cerca de 30 minutos, com hora marcada</span></li>
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-steto"/></svg><span>Três RQEs: Cardiologia, Clínica Médica e Terapia Intensiva</span></li>
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><span>Eletrocardiograma feito ali mesmo, no consultório</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg><span>Artigos científicos publicados sobre o coração</span></li>
     </ul>
   </div>
 </section>
@@ -467,25 +463,21 @@ h3{font-size:22px;line-height:1.25}
 <section class="servicos" data-bloco="servicos">
   <div class="wrap" data-rv>
     <div class="cab">
-      <h2>Quatro motivos para marcar</h2>
+      <h2>Minhas principais áreas de atuação</h2>
       <span class="filete" role="presentation"></span>
       <p>Para cada queixa, o que acontece na consulta: o que examino, o exame que peço ou leio, e a decisão que sai dali.</p>
       <div class="fecho">
-        <p>Exame alterado parado na gaveta não responde nada. Mande uma mensagem pelo WhatsApp e veja os horários livres.</p>
+        <p>Reconhece algo acima em você? Me conta pelo WhatsApp e veja os horários livres.</p>
         <button class="btn" type="button" data-wa>Agendar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
       </div>
     </div>
     <div class="lado">
     <ul class="itens">
       <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><div><h3>Pressão alta que não baixa ou que oscila</h3><p>Confiro as medidas, os remédios e as doses que você usa. Pressão que não cede com remédio, ou que aparece cedo, pode ter uma causa por trás: aí eu investigo antes de só aumentar a dose.</p></div></li>
-      <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><h3>Check-up do adulto</h3><p>Coração, pressão, glicose, colesterol e rins na mesma consulta. Digo quais exames pedir na sua idade e no seu histórico, e quais você pode dispensar.</p></div></li>
+      <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><h3>Check-up do adulto</h3><p>Na mesma consulta, com um médico só. Digo quais exames pedir na sua idade e no seu histórico, e quais você pode dispensar.</p></div></li>
       <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg><div><h3>Exame que veio alterado</h3><p>Colesterol, glicose, eletrocardiograma ou ecocardiograma fora do padrão. Leio o laudo, explico o que ele quer dizer no seu caso e decido: tratar, repetir ou investigar mais.</p></div></li>
       <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg><div><h3>Cansaço, palpitação ou medo do coração</h3><p>Coração disparado, fôlego curto na escada, cansaço fora do normal. Nem sempre é o coração: tireoide, anemia e remédio também causam. Examino e separo uma coisa da outra.</p></div></li>
     </ul>
-    <div class="urgencia" role="note">
-      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-alerta"/></svg>
-      <div><h3>Quando não esperar a consulta</h3><p>Dor forte no peito, falta de ar, desmaio ou fraqueza de um lado do corpo: procure o pronto-atendimento ou ligue 192.</p></div>
-    </div>
     </div>
   </div>
 </section>
@@ -510,7 +502,7 @@ h3{font-size:22px;line-height:1.25}
     </div>
     <div class="corpo">
       <p class="abre">Coordeno a UTI Cardiovascular. Lá, quem chega com problema no coração costuma ter rim, pulmão e remédio em jogo ao mesmo tempo. Não dá para tratar um sem conferir os outros. No consultório, faço a mesma conta.</p>
-      <p>Sou cardiologista, especialista em Clínica Médica e em Terapia Intensiva, com RQE nas três. Fiz mestrado em Ciências Cardiovasculares. A primeira consulta dura cerca de 30 minutos, com hora marcada.</p>
+      <p>Sou cardiologista, especialista em Clínica Médica e em Terapia Intensiva, com RQE nas três. Fiz mestrado em Ciências Cardiovasculares e publico pesquisa sobre o coração em revistas científicas.</p>
     </div>
   </div>
 </section>
@@ -529,7 +521,8 @@ h3{font-size:22px;line-height:1.25}
       <div><dt>Clínica Médica, RQE</dt><dd>38344</dd></div>
       <div><dt>Terapia Intensiva, RQE</dt><dd>55623</dd></div>
     </dl>
-    <p class="mestrado">Mestre em Ciências Cardiovasculares pela FELUMA, 2023 a 2025. Artigos publicados em revistas científicas, como a Scientific Reports (Nature Portfolio).</p>
+    <p class="mestrado">Mestre em Ciências Cardiovasculares pela FELUMA, 2023 a 2025.</p>
+    <p class="mestrado">Quatro artigos publicados sobre o coração: Scientific Reports, da Nature Portfolio (2026); Life Sciences (2026); Chemico-Biological Interactions (2024); International Journal of Cardiovascular Sciences (2020, relato de caso).</p>
     <p class="links"><a class="link-seta" href="https://portal.cfm.org.br/busca-medicos/" target="_blank" rel="noopener">Conferir no portal do CFM <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
     <p class="links"><a class="link-seta" href="https://lattes.cnpq.br/9483119161975354" target="_blank" rel="noopener">Ver o currículo Lattes, atualizado em abril de 2026 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
     </div>
@@ -543,7 +536,7 @@ h3{font-size:22px;line-height:1.25}
     <div class="lista">
       <details open><summary>Preciso ter algum sintoma para marcar?</summary><p>Não. Pressão alta pode ser silenciosa: você pode ter e não sentir nada. Medir e conferir os exames é o que mostra.</p></details>
       <details><summary>O que entra no check-up do adulto?</summary><p>Depende da sua idade, do seu histórico e dos exames que você já tem. Na consulta, digo o que pedir e por quê. O que você já fez entra na conta.</p></details>
-      <details><summary>Quanto dura a consulta?</summary><p>A primeira consulta dura cerca de 30 minutos, com hora marcada. O retorno, cerca de 10 minutos.</p></details>
+      <details><summary>O que acontece depois que eu mando a mensagem?</summary><p>A Lia, assistente da equipe, responde na hora, mostra os horários livres e confirma com você.</p></details>
       <details><summary>Preciso levar exames?</summary><p>Leve os exames e as receitas dos remédios que você usa, se tiver. Se não tiver nenhum, a consulta começa pela sua história e eu peço o que faltar.</p></details>
       <details><summary>Quais dias o Dr. Juliano atende?</summary><p>Terça e quarta, de manhã e à tarde. Quinta, a partir das 10h30. Feriados, não. Os horários livres você vê pelo WhatsApp.</p></details>
       <details><summary>Posso falar de vida sexual na consulta?</summary><p>Pode, como qualquer outro assunto. Alguns remédios mexem nisso, e contar ajuda a decidir o tratamento. Se preferir, é só dizer na consulta que quer conversar sobre isso.</p></details>
@@ -564,7 +557,7 @@ h3{font-size:22px;line-height:1.25}
       <dl>
         <div class="linha-l"><dt>Endereço</dt><dd>R. Dr. Arnaldo, 135, sala 12, Vila Pinto, Varginha, MG. CEP 37014-030.</dd></div>
         <div class="linha-l"><dt>Dias</dt><dd>Terça e quarta, de manhã e à tarde. Quinta, a partir das 10h30.</dd></div>
-        <div class="linha-l"><dt>Consulta</dt><dd>Cerca de 30 minutos na primeira, com hora marcada. Retorno de cerca de 10.</dd></div>
+        <div class="linha-l"><dt>Exame no local</dt><dd>Eletrocardiograma feito no consultório, quando a consulta pede.</dd></div>
         <div class="linha-l"><dt>Como marcar</dt><dd>Pelo WhatsApp, no botão Agendar pelo WhatsApp.</dd></div>
       </dl>
       <p><a class="link-seta" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Dr.+Arnaldo,+135,+Vila+Pinto,+Varginha,+MG" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nav"/></svg>Como chegar</a></p>
@@ -576,7 +569,7 @@ h3{font-size:22px;line-height:1.25}
   <div class="wrap" data-rv>
     <img src="assets/simbolo-escuro.svg" width="64" height="64" alt="" loading="lazy" decoding="async">
     <h2>Marque a sua consulta em Varginha</h2>
-    <p>Mande uma mensagem pelo WhatsApp, veja os horários livres de terça, quarta e quinta e escolha o seu. A primeira consulta dura cerca de 30 minutos.</p>
+    <p>Mande uma mensagem pelo WhatsApp, veja os horários livres de terça, quarta e quinta e escolha o seu.</p>
     <button class="btn claro" type="button" data-wa>Agendar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
   </div>
 </section>
