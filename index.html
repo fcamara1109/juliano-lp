@@ -12,7 +12,7 @@ Função: site do Dr. Juliano Reis (cardiologista e clínica médica, CRM-MG 633
 Data: 2026-11-09. Marca: external/doctors/juliano/wiki/concepts/marca-juliano (tokens.css copiado para assets/tokens.css, copia de deploy). Ícones: Lucide v0.475.0 (licença ISC), em sprite no começo do body.
 Preview noindex em fcamara1109/juliano-lp. Premissas, desvios e pendências: README.md desta pasta.
 -->
-<meta name="description" content="Dr. Juliano Reis, médico (CRM-MG 63389) e cardiologista (RQE 45159) em Varginha, MG. Coordena a UTI Cardiovascular. Pressão alta, exame alterado e check-up do adulto, com um médico só.">
+<meta name="description" content="Dr. Juliano Reis, médico (CRM-MG 63389) e cardiologista (RQE 45159) em Varginha, MG. Coordena a UTI Cardiovascular. Pressão que não controla e exame sem explicação.">
 <meta name="theme-color" content="#F5F2EC">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -21,14 +21,14 @@ Preview noindex em fcamara1109/juliano-lp. Premissas, desvios e pendências: REA
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Dr. Juliano Reis">
-<meta property="og:title" content="Cuido do coração e do resto junto, na mesma consulta">
-<meta property="og:description" content="Médico, CRM-MG 63389. Cardiologia, RQE 45159. Pressão alta, exame alterado e check-up do adulto em Varginha, MG.">
+<meta property="og:title" content="Pressão que não controla. Exame sem explicação. Caso difícil é comigo.">
+<meta property="og:description" content="Médico, CRM-MG 63389. Cardiologia, RQE 45159. Pressão que não controla e exame sem explicação, em Varginha, MG.">
 <meta property="og:image" content="https://fcamara1109.github.io/juliano-lp/assets/og-1200x630.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cuido do coração e do resto junto, na mesma consulta">
-<meta name="twitter:description" content="Médico, CRM-MG 63389. Cardiologia, RQE 45159. Pressão alta, exame alterado e check-up do adulto em Varginha, MG.">
+<meta name="twitter:title" content="Pressão que não controla. Exame sem explicação. Caso difícil é comigo.">
+<meta name="twitter:description" content="Médico, CRM-MG 63389. Cardiologia, RQE 45159. Pressão que não controla e exame sem explicação, em Varginha, MG.">
 <link rel="preload" href="assets/fonts/Jost.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="assets/fonts/Newsreader.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/tokens.css">
@@ -61,7 +61,7 @@ button{font:inherit;color:inherit}
 
 /* ---------- tipos ---------- */
 h1,h2,h3{margin:0;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);line-height:var(--juliano-lh-titulo);letter-spacing:var(--juliano-track-titulo);text-wrap:balance}
-.hero-titulo{font-size:clamp(32px,1.6rem + 2.4vw,56px)}
+.hero-titulo{font-size:clamp(28px,1.3rem + 1.8vw,44px)}
 h2{font-size:clamp(26px,1.4rem + 1.2vw,38px)}
 h3{font-size:22px;line-height:1.25}
 .filete{display:block;width:44px;height:2px;margin:var(--juliano-e-3) 0 var(--juliano-e-3);background:var(--juliano-bronze,#7D5C39)}
@@ -92,13 +92,15 @@ h3{font-size:22px;line-height:1.25}
 
 /* ---------- hero: o eixo, o nome, uma linha de prova, um botao, o apoio ---------- */
 .hero{position:relative;padding:var(--juliano-e-4) 0 0;background:var(--juliano-paper)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"reg" "chips" "h1" "sub" "acoes" "foto";row-gap:var(--juliano-e-2);align-items:start}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"reg" "chips" "h1" "dor" "sub" "acoes" "foto";row-gap:var(--juliano-e-2);align-items:start}
 .hero .legal{grid-area:reg;margin:0;font-size:var(--juliano-t-rotulo);line-height:1.4;letter-spacing:-.01em;color:var(--juliano-ink-2)}
 .chips{grid-area:chips;list-style:none;margin:0 0 var(--juliano-e-1);padding:0;display:flex;flex-wrap:wrap;gap:var(--juliano-e-1) var(--juliano-e-3)}
 .chips li{display:inline-flex;align-items:center;gap:8px;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:15px;line-height:1.25;text-transform:uppercase;letter-spacing:.08em;color:var(--juliano-accent)}
 .chips .ico{width:18px;height:18px;flex:none;color:var(--juliano-bronze)}
 .hero .hero-titulo{grid-area:h1}
 .sub{grid-area:sub;margin:0;max-width:34em;font-family:var(--juliano-display);font-weight:400;font-size:var(--juliano-t-lede);line-height:1.4;color:var(--juliano-ink)}
+.dor-hero{grid-area:dor;margin:0;max-width:26em;font-family:var(--juliano-display);font-weight:var(--juliano-peso-titulo);font-size:clamp(22px,1.1rem + 1.1vw,32px);line-height:1.25;color:var(--juliano-ink)}
+.dor-hero .destaque{color:var(--juliano-ink);background:linear-gradient(transparent 58%,#F1D9B8 58%,#F1D9B8 92%,transparent 92%);padding:0 .08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .foto{grid-area:foto;position:relative;margin:0}
 .foto img{display:block;width:100%;height:260px;object-fit:cover;object-position:50% 30%;border-radius:var(--juliano-r-foto);box-shadow:var(--juliano-sombra-foto);background:var(--juliano-greige)}
 .acoes{grid-area:acoes;display:grid;gap:var(--juliano-e-2);justify-items:start}
@@ -126,6 +128,11 @@ h3{font-size:22px;line-height:1.25}
 .item .ico{width:34px;height:34px;margin-top:2px;color:var(--juliano-accent)}
 .item h3{margin:0 0 6px}
 .item p{margin:0;color:var(--juliano-ink-2)}
+.item.grande{padding:var(--juliano-e-4) 0}
+.item.grande p+p{margin-top:var(--juliano-e-2)}
+.item .dor{color:var(--juliano-ink);font-size:var(--juliano-t-lede,1.1em);line-height:1.45}
+.item .arg{border-left:2px solid var(--juliano-accent);padding-left:var(--juliano-e-2);color:var(--juliano-ink)}
+.item.grande .btn{margin-top:var(--juliano-e-3)}
 
 /* ---------- porque: papel. O titulo de um lado, a voz dele do outro ---------- */
 .porque{background:var(--juliano-paper);padding:var(--juliano-e-6) 0}
@@ -221,13 +228,13 @@ h3{font-size:22px;line-height:1.25}
   .marca img{width:50px;height:50px}
   .wm b{font-size:18px}
   .hero{padding-top:var(--juliano-e-6)}
-  .hero .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);grid-template-areas:"reg foto" "chips foto" "h1 foto" "sub foto" "acoes foto" ". foto";grid-template-rows:auto auto auto auto auto 1fr;column-gap:var(--juliano-e-6);row-gap:var(--juliano-e-3);align-items:start}
+  .hero .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);grid-template-areas:"reg foto" "chips foto" "h1 foto" "dor foto" "sub foto" "acoes foto" ". foto";grid-template-rows:auto auto auto auto auto auto 1fr;column-gap:var(--juliano-e-6);row-gap:var(--juliano-e-3);align-items:start}
   .hero .legal{font-size:var(--juliano-t-legenda)}
   .foto{width:100%;max-width:380px;justify-self:end;margin-right:var(--juliano-e-3)}
   .foto::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--juliano-bronze);border-radius:var(--juliano-r-foto);z-index:0}
   .foto img{position:relative;z-index:1;width:100%;height:auto;aspect-ratio:4/5;object-position:50% 50%}
   .ripado{height:56px;margin-top:var(--juliano-e-6)}
-  .beneficios ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .beneficios ul{grid-template-columns:repeat(4,minmax(0,1fr))}
   .beneficios li{border-top:0;border-left:1px solid rgba(245,242,236,.16);padding:var(--juliano-e-4) var(--juliano-e-4)}
   .beneficios li:first-child{border-left:0;padding-left:0}
   .servicos .wrap{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);column-gap:var(--juliano-e-6);align-items:start}
@@ -264,15 +271,71 @@ h3{font-size:22px;line-height:1.25}
    (gerada, opcao C de topo/) ate o Juliano mandar fotos boas; o texto fica por cima, num degrade escuro */
 @media (max-width:879px){
 .hero{padding:0;background:#141a1f;overflow:hidden}
-.hero .wrap{position:relative;min-height:calc(100svh - 150px);padding-top:0;padding-bottom:24px;grid-template-areas:"." "reg" "chips" "h1" "sub" "acoes";grid-template-rows:1fr auto auto auto auto auto;row-gap:10px}
+.hero .wrap{position:relative;min-height:calc(100svh - 150px);padding-top:0;padding-bottom:24px;grid-template-areas:"." "reg" "chips" "h1" "dor" "sub" "acoes";grid-template-rows:1fr auto auto auto auto auto auto;row-gap:10px}
 .hero .wrap::before{content:"";position:absolute;inset:0 -16px;background:linear-gradient(180deg,rgba(20,26,31,0) 25%,rgba(20,26,31,.82) 50%,rgba(20,26,31,.97) 100%),url(fotos/hero-mesa.jpg) 60% 40%/cover no-repeat;z-index:0}
 .hero .wrap>*{position:relative;z-index:1}
 .hero .foto{display:none}
-.hero .legal,.hero .sub{color:#E9E4DC}
+.hero .legal,.hero .sub,.hero .dor-hero{color:#E9E4DC}
 .hero .hero-titulo{color:#fff}
 .hero .chips li{color:#F1D9B8}
 .hero .chips .ico{color:#E2B98A}
 .hero .ripado{display:none}
+}
+/* ---------- refino 22/11 (revisao impeccable): faixa, casos, pesquisa, ponte, avaliacoes ---------- */
+.beneficios li{display:grid;grid-template-columns:auto 1fr;align-items:start;column-gap:var(--juliano-e-2)}
+.beneficios li b{display:block;font-family:var(--juliano-display);font-weight:500;font-size:var(--site-t-fio);line-height:1.25;color:var(--juliano-on-night)}
+.beneficios li span{display:block;margin-top:6px;font-family:var(--juliano-body);font-weight:400;font-size:18px;line-height:1.45;letter-spacing:0;color:var(--juliano-on-night-2)}
+.beneficios ul{align-items:start}
+.beneficios li,.beneficios li>div,.beneficios .selo{align-self:start}
+.beneficios .selo{color:inherit;text-decoration:none}
+.beneficios .selo span{text-decoration:underline;text-decoration-color:var(--juliano-bronze-claro);text-underline-offset:.25em}
+.item{grid-template-columns:1fr;row-gap:var(--juliano-e-1)}
+.item>.ico{width:30px;height:30px;margin:0;color:var(--juliano-bronze)}
+.item h3{color:var(--juliano-accent)}
+.item.grande h3{font-size:clamp(24px,1.2rem + 1vw,30px);line-height:1.2}
+.item.grande .dor{margin:var(--juliano-e-1) 0 var(--juliano-e-2);font-size:var(--juliano-t-lede);color:var(--juliano-ink)}
+.item:not(.grande) p{font-size:18px;line-height:1.55}
+.servicos .depois{margin-top:var(--juliano-e-4)}
+.causas{list-style:none;margin:0 0 var(--juliano-e-2);padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.causas li{font-family:var(--juliano-display);font-size:16px;line-height:1;padding:9px 12px;border:1px solid var(--juliano-hair-forte);border-radius:999px;color:var(--juliano-ink)}
+.pesquisa h3{color:var(--juliano-on-night);margin-bottom:var(--juliano-e-2)}
+.mestre{margin:0 0 var(--juliano-e-3)}
+.mestre b{display:block;font-family:var(--juliano-display);font-weight:500;font-size:var(--juliano-t-h3);color:var(--juliano-on-night)}
+.mestre span{color:var(--juliano-on-night-2)}
+.artigos{list-style:none;margin:0 0 var(--juliano-e-5);padding:0;display:grid;gap:var(--juliano-e-2)}
+.artigo{display:grid;grid-template-columns:1fr auto;gap:6px var(--juliano-e-2);padding:var(--juliano-e-3);border:1px solid rgba(245,242,236,.22);border-radius:var(--juliano-r-cartao)}
+.artigo .rev{font-family:var(--juliano-display);font-weight:500;font-size:17px;letter-spacing:.02em;color:var(--juliano-bronze-claro)}
+.artigo .ano{font-family:var(--juliano-display);font-variant-numeric:tabular-nums;color:var(--juliano-on-night-2)}
+.artigo .tema{grid-column:1/-1;margin:0;font-family:var(--juliano-display);font-weight:500;font-size:var(--juliano-t-h3);line-height:1.3;color:var(--juliano-on-night)}
+.artigo .papel{grid-column:1/-1;margin:0;font-size:16px;color:var(--juliano-on-night-2)}
+.artigo.destaque{border-color:var(--juliano-bronze-claro);background:rgba(245,242,236,.05)}
+.artigo.destaque .tema{font-size:clamp(24px,1.2rem + 1vw,30px)}
+.ponte{margin:0}
+.ponte div{padding:var(--juliano-e-3) 0;border-top:1px solid var(--juliano-hair-forte)}
+.ponte dt{font-family:var(--juliano-display);font-weight:500;font-size:18px;color:var(--juliano-bronze)}
+.ponte dd{margin:4px 0 0;font-size:var(--juliano-t-lede);line-height:1.45;color:var(--juliano-ink)}
+.avaliacoes{background:var(--juliano-paper)}
+.avaliacoes .fonte .logo-g{width:28px;height:28px;flex:0 0 auto}
+.porque{background:var(--juliano-paper-2)}
+@media (max-width:559px){:root{--wrap-pad:16px}}
+
+@media (max-width:359px){.hero .chips{display:none}}
+@media (max-width:879px){.hero .dor-hero .destaque{color:#F1D9B8;background:none;padding:0}}
+.hero .chips li{padding:6px 12px;border:1px solid var(--juliano-hair-forte);border-radius:999px;background:rgba(255,255,255,.55)}
+@media (max-width:879px){.hero .chips li{color:var(--juliano-on-night);border-color:rgba(241,217,184,.45);background:rgba(23,36,49,.55)}.hero .chips .ico{color:#F1D9B8}}
+@media (min-width:880px){
+  .beneficios li{grid-template-columns:1fr;row-gap:var(--juliano-e-2);padding:var(--juliano-e-5) var(--juliano-e-3)}
+  .beneficios li:first-child{padding-left:0}
+  .servicos .wrap{grid-template-columns:1fr}
+  .servicos .cab{position:static}
+  .itens{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:var(--juliano-e-5);border-bottom:0}
+  .item.grande{grid-column:span 3}
+  .item:not(.grande){grid-column:span 2}
+  .artigos{grid-template-columns:1fr 1fr}
+  .artigo.destaque{grid-column:1/-1}
+  .avaliacoes .vozes{grid-template-columns:2fr 1fr}
+  .voz:first-child{grid-row:span 2}
+  .voz:first-child blockquote p{font-size:clamp(24px,1.2rem + 1vw,30px);line-height:1.4}
 }
 </style>
 <style>
@@ -436,11 +499,12 @@ h3{font-size:22px;line-height:1.25}
   <div class="wrap">
     <p class="legal">Médico, CRM-MG 63389 · Cardiologia, RQE 45159</p>
     <ul class="chips" aria-label="Credenciais">
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg>Coordena a UTI Cardiovascular</li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg>Coordeno a UTI Cardiovascular</li>
       <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg>Mestre em Ciências Cardiovasculares</li>
     </ul>
-    <h2 class="hero-titulo">Cuido do coração e do resto junto, na mesma consulta.</h2>
-    <p class="sub">Pressão alta, exame alterado e check-up do adulto, com um médico só.</p>
+    <h2 class="hero-titulo">Pressão que não controla. Exame sem explicação. Susto que levou ao hospital.</h2>
+    <p class="dor-hero">Fique tranquilo, <span class="destaque">caso difícil é comigo.</span></p>
+    <p class="sub">Investigo a causa e olho para o todo, não só o coração.</p>
     <figure class="foto"><img src="fotos/hero-mesa.jpg" width="900" height="1612" alt="Mesa de consultório de cardiologia com estetoscópio, aparelho de pressão e o traçado de um eletrocardiograma." fetchpriority="high"></figure>
     <div class="acoes">
       <button class="btn" type="button" data-wa data-sticky-alvo>Falar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
@@ -450,12 +514,13 @@ h3{font-size:22px;line-height:1.25}
   <span class="ripado" aria-hidden="true"></span>
 </section>
 
-<section class="beneficios" data-bloco="beneficios" aria-label="Como funciona o atendimento">
+<section class="beneficios" data-bloco="beneficios" aria-label="Por que os casos difíceis chegam até mim">
   <div class="wrap" data-rv>
     <ul>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-steto"/></svg><span>Três RQEs: Cardiologia, Clínica Médica e Terapia Intensiva</span></li>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><span>Eletrocardiograma feito ali mesmo, no consultório</span></li>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg><span>Artigos científicos publicados sobre o coração</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-steto"/></svg><div><b>Três especialidades</b><span>Cardiologia, Clínica Médica e Terapia Intensiva</span></div></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><div><b>Prevenção e emergência</b><span>Coordeno a UTI Cardiovascular</span></div></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg><a class="selo" href="#pesquisa"><b>Pesquisa publicada</b><span>Primeiro autor na Scientific Reports (2026), sobre proteger o coração na quimioterapia</span></a></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg><div><b>Sem tabu</b><span>Vida sexual, anabolizante, o que você precisar me contar</span></div></li>
     </ul>
   </div>
 </section>
@@ -463,21 +528,18 @@ h3{font-size:22px;line-height:1.25}
 <section class="servicos" data-bloco="servicos">
   <div class="wrap" data-rv>
     <div class="cab">
-      <h2>Minhas principais áreas de atuação</h2>
+      <h2>Casos que chegam até mim</h2>
       <span class="filete" role="presentation"></span>
-      <p>Para cada queixa, o que acontece na consulta: o que examino, o exame que peço ou leio, e a decisão que sai dali.</p>
-      <div class="fecho">
-        <p>Reconhece algo acima em você? Me conta pelo WhatsApp e veja os horários livres.</p>
-        <button class="btn" type="button" data-wa>Falar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
-      </div>
     </div>
     <div class="lado">
     <ul class="itens">
-      <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><div><h3>Pressão alta que não baixa ou que oscila</h3><p>Confiro as medidas, os remédios e as doses que você usa. Pressão que não cede com remédio, ou que aparece cedo, pode ter uma causa por trás: aí eu investigo antes de só aumentar a dose.</p></div></li>
-      <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><h3>Check-up do adulto</h3><p>Na mesma consulta, com um médico só. Digo quais exames pedir na sua idade e no seu histórico, e quais você pode dispensar.</p></div></li>
-      <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg><div><h3>Exame que veio alterado</h3><p>Colesterol, glicose, eletrocardiograma ou ecocardiograma fora do padrão. Leio o laudo, explico o que ele quer dizer no seu caso e decido: tratar, repetir ou investigar mais.</p></div></li>
-      <li class="item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg><div><h3>Cansaço, palpitação ou medo do coração</h3><p>Coração disparado, fôlego curto na escada, cansaço fora do normal. Nem sempre é o coração: tireoide, anemia e remédio também causam. Examino e separo uma coisa da outra.</p></div></li>
+      <li class="item grande" id="pressao"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg><div><h3>Pressão que não baixa, mesmo com remédio</h3><p class="dor">A dose já subiu e a pressão continua alta ou oscilando.</p><ul class="causas"><li>Rim</li><li>Tireoide</li><li>Sono</li><li>Outro remédio</li><li>Diabetes</li><li>Colesterol</li></ul><p>Procuro o que está por trás e investigo a causa antes de só aumentar a dose.</p></div></li>
+      <li class="item grande" id="exame"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg><div><h3>Exame alterado que ninguém explicou</h3><p class="dor">Exame fora do padrão e ninguém explicou o que fazer. Ou palpitação e cansaço sem causa achada.</p><ul class="causas"><li>Colesterol</li><li>Glicose</li><li>Eletro</li><li>Eco</li></ul><p>Leio o laudo com a sua história e decido com você: tratar, repetir ou investigar mais.</p></div></li>
+      <li class="item" id="depois-do-hospital"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg><div><h3>Saiu do hospital depois de um problema no coração</h3><p>Conheço esse caminho por dentro: coordeno a UTI Cardiovascular. No consultório, acompanho os remédios novos, os exames e a volta à rotina.</p></div></li>
+      <li class="item" id="tratamento-cancer"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><h3>Em tratamento de câncer e preocupado com o coração</h3><p>Alguns remédios contra o câncer pesam no coração. Foi o tema do meu mestrado e do meu artigo na Scientific Reports, em 2026. Acompanho o coração junto com o seu oncologista.</p></div></li>
+      <li class="item" id="treino"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-steto"/></svg><div><h3>Treina pesado ou usa hormônio</h3><p>O que você usa muda a leitura da pressão, dos exames e do coração. Converso sobre isso com ciência e sem julgamento.</p></div></li>
     </ul>
+    <div class="depois"><button class="btn" type="button" data-wa>Falar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button></div>
     </div>
   </div>
 </section>
@@ -486,45 +548,40 @@ h3{font-size:22px;line-height:1.25}
   <div class="wrap" data-rv>
     <h2 id="avaliacoes-t">No Google, pacientes escreveram sobre pontualidade, atenção e pressão estável</h2>
     <ul class="vozes">
-      <li class="voz"><blockquote><p>"Sou paciente do Doutor Juliano a mais de 3 anos. [...] eu tive um diagnóstico não tão comum de pressão alta secundária. Tive todo suporte, averiguamos, fizemos tratamento e hoje vivo minha vida normal com a pressão estável."</p></blockquote><p class="autor">Talita B., junho de 2026</p></li>
-      <li class="voz"><blockquote><p>"Pontualidade no atendimento e segurança em seu diagnóstico."</p></blockquote><p class="autor">Marco S., fevereiro de 2026</p></li>
-      <li class="voz"><blockquote><p>"Muita atenção e cuidado com paciente. Agradeço."</p></blockquote><p class="autor">Raquel F., maio de 2025</p></li>
+      <li class="voz"><blockquote><p>“Sou paciente do Doutor Juliano a mais de 3 anos. [...] eu tive um diagnóstico não tão comum de pressão alta secundária. Tive todo suporte, averiguamos, fizemos tratamento e hoje vivo minha vida normal com a pressão estável.”</p></blockquote><p class="autor">Talita B., junho de 2026</p></li>
+      <li class="voz"><blockquote><p>“Pontualidade no atendimento e segurança em seu diagnóstico.”</p></blockquote><p class="autor">Marco S., fevereiro de 2026</p></li>
+      <li class="voz"><blockquote><p>“Muita atenção e cuidado com paciente. Agradeço.”</p></blockquote><p class="autor">Raquel F., maio de 2025</p></li>
     </ul>
-    <p class="fonte"><svg class="ico estrela" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><a class="link-seta" href="https://maps.google.com/?cid=4718023751414163410" target="_blank" rel="noopener">Avaliações públicas no Google, com o texto como cada paciente escreveu <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
-  </div>
-</section>
-
-<section class="porque" data-bloco="porque">
-  <div class="wrap" data-rv>
-    <div class="cab">
-      <h2>O que a UTI traz para o consultório</h2>
-      <span class="filete" role="presentation"></span>
-    </div>
-    <div class="corpo">
-      <p class="abre">Coordeno a UTI Cardiovascular. Lá, quem chega com problema no coração costuma ter rim, pulmão e remédio em jogo ao mesmo tempo. Não dá para tratar um sem conferir os outros. No consultório, faço a mesma conta.</p>
-      <p>Sou cardiologista, especialista em Clínica Médica e em Terapia Intensiva, com RQE nas três. Fiz mestrado em Ciências Cardiovasculares e publico pesquisa sobre o coração em revistas científicas.</p>
-    </div>
+    <p class="fonte"><img class="logo-g" src="assets/google-g.png" width="28" height="28" alt="Logo do Google"><a class="link-seta" href="https://maps.google.com/?cid=4718023751414163410" target="_blank" rel="noopener">Ver as avaliações no Google <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
   </div>
 </section>
 
 <section class="prova" data-bloco="prova">
   <div class="wrap" data-rv>
     <div class="cab">
-      <h2>Registros que você pode conferir</h2>
+      <h2>Formação e pesquisa que você pode conferir</h2>
       <span class="filete" role="presentation"></span>
-      <p>Os números são públicos: dá para conferir no portal do CFM. A formação está no currículo Lattes.</p>
+      <p>Os números são públicos: dá para conferir no portal do CFM. A formação está no currículo Lattes, atualizado em abril de 2026.</p>
     </div>
     <div class="corpo">
+    <div class="pesquisa" id="pesquisa">
+    <h3>Pesquisa que publiquei sobre o coração</h3>
+    <p class="mestre"><b>Mestre em Ciências Cardiovasculares</b><span>FELUMA, 2023 a 2025</span></p>
+    <ol class="artigos">
+    <li class="artigo destaque"><span class="rev">Scientific Reports, da Nature Portfolio</span><span class="ano">2026</span><p class="tema">Como proteger o coração durante a quimioterapia</p><p class="papel">Primeiro autor</p></li>
+    <li class="artigo"><span class="rev">Life Sciences</span><span class="ano">2026</span><p class="tema">Jejum intermitente e o coração sob estresse: revisão de estudos</p><p class="papel">Segundo autor</p></li>
+    <li class="artigo"><span class="rev">Chemico-Biological Interactions</span><span class="ano">2024</span><p class="tema">Remédios do diabetes que protegem o coração</p><p class="papel">Coautor</p></li>
+    <li class="artigo"><span class="rev">International Journal of Cardiovascular Sciences</span><span class="ano">2020</span><p class="tema">Relato de caso: coração com uma só artéria coronária</p><p class="papel">Coautor</p></li>
+    </ol>
+    </div>
     <dl class="regs">
       <div><dt>Médico, CRM-MG</dt><dd>63389</dd></div>
       <div><dt>Cardiologia, RQE</dt><dd>45159</dd></div>
       <div><dt>Clínica Médica, RQE</dt><dd>38344</dd></div>
       <div><dt>Terapia Intensiva, RQE</dt><dd>55623</dd></div>
     </dl>
-    <p class="mestrado">Mestre em Ciências Cardiovasculares pela FELUMA, 2023 a 2025.</p>
-    <p class="mestrado">Quatro artigos publicados sobre o coração: Scientific Reports, da Nature Portfolio (2026); Life Sciences (2026); Chemico-Biological Interactions (2024); International Journal of Cardiovascular Sciences (2020, relato de caso).</p>
     <p class="links"><a class="link-seta" href="https://portal.cfm.org.br/busca-medicos/" target="_blank" rel="noopener">Conferir no portal do CFM <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
-    <p class="links"><a class="link-seta" href="https://lattes.cnpq.br/9483119161975354" target="_blank" rel="noopener">Ver o currículo Lattes, atualizado em abril de 2026 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
+    <p class="links"><a class="link-seta" href="https://lattes.cnpq.br/9483119161975354" target="_blank" rel="noopener">Ver meu currículo Lattes <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></a></p>
     </div>
   </div>
 </section>
@@ -534,13 +591,10 @@ h3{font-size:22px;line-height:1.25}
     <h2>Perguntas frequentes</h2>
     <span class="filete" role="presentation"></span>
     <div class="lista">
-      <details open><summary>Preciso ter algum sintoma para marcar?</summary><p>Não. Pressão alta pode ser silenciosa: você pode ter e não sentir nada. Medir e conferir os exames é o que mostra.</p></details>
-      <details><summary>O que entra no check-up do adulto?</summary><p>Depende da sua idade, do seu histórico e dos exames que você já tem. Na consulta, digo o que pedir e por quê. O que você já fez entra na conta.</p></details>
-      <details><summary>O que acontece depois que eu mando a mensagem?</summary><p>A Lia, assistente da equipe, responde na hora, mostra os horários livres e confirma com você.</p></details>
-      <details><summary>Preciso levar exames?</summary><p>Leve os exames e as receitas dos remédios que você usa, se tiver. Se não tiver nenhum, a consulta começa pela sua história e eu peço o que faltar.</p></details>
-      <details><summary>Quais dias o Dr. Juliano atende?</summary><p>Terça e quarta, de manhã e à tarde. Quinta, a partir das 10h30. Feriados, não. Os horários livres você vê pelo WhatsApp.</p></details>
-      <details><summary>Posso falar de vida sexual na consulta?</summary><p>Pode, como qualquer outro assunto. Alguns remédios mexem nisso, e contar ajuda a decidir o tratamento. Se preferir, é só dizer na consulta que quer conversar sobre isso.</p></details>
-      <details><summary>Uso anabolizante ou suplemento. Posso falar disso na consulta?</summary><p>Pode. O que você usa muda a leitura da pressão, dos exames e do coração. Conversa de consulta, sem julgamento e sem sermão.</p></details>
+      <details open><summary>Você também faz check-up e prevenção?</summary><p>Faço. Check-up do coração, pressão alta recém-descoberta e acompanhamento de rotina também são comigo.</p></details>
+      <details><summary>Posso marcar para ouvir uma segunda opinião?</summary><p>Pode. Leve o que já foi feito até aqui, e a gente decide junto os próximos passos.</p></details>
+      <details><summary>Preciso levar exames?</summary><p>Leve os exames e as receitas que tiver, inclusive os antigos. Se não tiver nenhum, eu peço o que faltar.</p></details>
+      <details><summary>O que acontece depois que eu mando a mensagem?</summary><p>A Lia, minha assistente, responde na hora, mostra os horários livres e confirma com você.</p></details>
     </div>
   </div>
 </section>
@@ -558,7 +612,6 @@ h3{font-size:22px;line-height:1.25}
         <div class="linha-l"><dt>Endereço</dt><dd>R. Dr. Arnaldo, 135, sala 12, Vila Pinto, Varginha, MG. CEP 37014-030.</dd></div>
         <div class="linha-l"><dt>Dias</dt><dd>Terça e quarta, de manhã e à tarde. Quinta, a partir das 10h30.</dd></div>
         <div class="linha-l"><dt>Exame no local</dt><dd>Eletrocardiograma feito no consultório, quando a consulta pede.</dd></div>
-        <div class="linha-l"><dt>Como marcar</dt><dd>Pelo WhatsApp, no botão Falar pelo WhatsApp.</dd></div>
       </dl>
       <p><a class="link-seta" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Dr.+Arnaldo,+135,+Vila+Pinto,+Varginha,+MG" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nav"/></svg>Como chegar</a></p>
     </div>
@@ -568,8 +621,7 @@ h3{font-size:22px;line-height:1.25}
 <section class="cta-final" data-bloco="cta-final">
   <div class="wrap" data-rv>
     <img src="assets/simbolo-escuro.svg" width="64" height="64" alt="" loading="lazy" decoding="async">
-    <h2>Marque a sua consulta em Varginha</h2>
-    <p>Mande uma mensagem pelo WhatsApp, veja os horários livres de terça, quarta e quinta e escolha o seu.</p>
+    <h2>Me conta o seu caso</h2>
     <button class="btn claro" type="button" data-wa>Falar pelo WhatsApp <svg class="ico seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
   </div>
 </section>
